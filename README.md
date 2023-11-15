@@ -33,9 +33,13 @@
 
 ---
 
-#### MAIN PAGE
+#### INDEX PAGE
 
 - The website got one page which is the game page.
+
+#### GAME AREA PAGE
+
+- 
 
 ### FEATURES
 
@@ -89,7 +93,7 @@
 - icons [https://fontawesome.com/]
 - [https://validator.w3.org/nu/] to validate html code
 - [https://jigsaw.w3.org/css-validator/] to validate css code
-- [https://www.shutterstock.com/sv/explore/standout20-promo?cr=ec&ds_ag=FF%3DBrand-Shutterstock_Exact_AU%3DProspecting&ds_agid=58700002001545688&ds_cid=71700000017552442&ds_eid=700000001508228&gclid=EAIaIQobChMI5LSjgZXDggMVIkeRBR0cCwXqEAAYASAAEgJRrvD_BwE&gclsrc=aw.ds&kw=shutterstock&pl=PPC_GOO_SE_BD-204760450203&utm_campaign=CO%3DSE_LG%3DSV_BU%3DIMG_AD%3DBRAND_TS%3Dlggeneric_RG%3DEUAF_AB%3DACQ_CH%3DSEM_OG%3DCONV_PB%3DGoogle&utm_medium=cpc&utm_source=GOOGLE] for images
+- [https://freepngimg.com/] for images
 - favicon from [https://fontawesome.com/icons/block-question?f=classic&s=duotone&pc=%23dcb218&sc=%23dcb218]
 - used [https://favicon.io/favicon-converter/] to generate the favicon
 - [https://www.remove.bg/] to remove background from favicon
