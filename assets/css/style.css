@@ -52,9 +52,7 @@ font-family: 'Kdam Thmor Pro', sans-serif;
 .memorycards {
     position: relative;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    
+    column-count: 3;
 }
 
 
