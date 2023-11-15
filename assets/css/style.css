@@ -26,6 +26,7 @@ font-family: 'Kdam Thmor Pro', sans-serif;
         z-index: 1;
         position: fixed;
         text-align: center;
+        width: 100%;
 }
 
 .game-area {
@@ -43,17 +44,40 @@ font-family: 'Kdam Thmor Pro', sans-serif;
     box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
 }
 
+.stats-container {
+    display: flex;
+    
+}
+
 .memorycards {
     position: relative;
     width: 100%;
-    display: grid;
-    column-count: 3;
     display: flex;
+    flex-wrap: wrap;
+    
 }
+
 
 .responsive {
     
     width: auto;
     height: auto;
         
+}
+
+/* Media query: large or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
+   
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+}
+
+/* Media query: Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+}
+
+/* Media query: Screens bigger then 1200px */
+@media screen and (min-width: 1200px) { 
 }
