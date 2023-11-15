@@ -23,12 +23,16 @@ font-family: 'Kdam Thmor Pro', sans-serif;
         -1px -1px #000,
         1px -1px #000,
         -1px 1px #000;
+        z-index: 1;
+        position: fixed;
+        text-align: center;
 }
 
 .game-area {
 
     box-sizing: border-box;
-    width: 26, 87em;
+    width: 35em;
+    height: 50em;
     padding: 2.5em 3em;
     background: #fff;
     position: absolute;
@@ -39,8 +43,17 @@ font-family: 'Kdam Thmor Pro', sans-serif;
     box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
 }
 
-.memory-cards {
+.memorycards {
     position: relative;
     width: 100%;
     display: grid;
+    column-count: 3;
+    display: flex;
+}
+
+.responsive {
+    
+    width: auto;
+    height: auto;
+        
 }
