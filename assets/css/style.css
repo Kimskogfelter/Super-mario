@@ -7,15 +7,19 @@
 .body {
     background: red;
     /*link to google fonts*/
-font-family: 'Kdam Thmor Pro', sans-serif;
-    
+    font-family: 'Seymour One', sans-serif;
+    display: flex;
+    justify-content: center;
+
 }
 
 /* INDEX.HTML PAGE */
 
+
+
 .header {
     color: white;
-    font-size: 3rem;
+    font-size: 2rem;
     letter-spacing: 3px;
     text-shadow: 2px 0 #000,
         -2px 0 #000,
@@ -29,16 +33,37 @@ font-family: 'Kdam Thmor Pro', sans-serif;
         position: fixed;
         text-align: center;
         width: 100%;
+        margin-top: 2em;
 }
 
-#letsgo-button  {
+.starting-page-container {
     display: flex;
-    text-align: center;
-    color: #fff;
+    flex-direction: column;
+    margin-top: 15em;
+    align-items: center;
+}
+
+
+
+#letsgo-button  {
+   
+   text-align: center;
+    color: white;
     text-decoration: none;
-    border: 2px solid #000;
-    width: 80px;
-    height: 30px;
+    width: 250px;
+    height: 70px;
+    cursor: pointer;
+    font-size: 2em;
+    text-shadow: 2px 0 #000,
+            -2px 0 #000,
+            0 2px #000,
+            0 -2px #000,
+            1px 1px #000,
+            -1px -1px #000,
+            1px -1px #000,
+            -1px 1px #000;
+    text-transform: uppercase;
+    margin-top: 1em;
 }
 
 
@@ -74,8 +99,7 @@ font-family: 'Kdam Thmor Pro', sans-serif;
 .responsive {
     
     width: auto;
-    height: auto;
-        
+    height: auto; 
 }
 
 /* Media query: large or landscape phones (576px and up) */
