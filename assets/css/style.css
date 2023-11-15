@@ -4,18 +4,18 @@
     box-sizing: border-box;
 }
 
-.body {
+body {
     background: red;
     /*link to google fonts*/
     font-family: 'Seymour One', sans-serif;
-    display: flex;
-    justify-content: center;
-
 }
 
 /* INDEX.HTML PAGE */
 
-
+.index-body {
+  display: flex;
+  justify-content: center;
+}
 
 .header {
     color: white;
@@ -69,37 +69,91 @@
 
 
 /* GAME-AREA.HTML PAGE */
+
+.gamearea-body {
+    display: flex;
+    justify-content: center;
+}
+
 .game-area {
 
     box-sizing: border-box;
-    width: 20em;
-    height: 40em;
-    padding: 2.5em 3em;
-    background: #fff;
+    width: 25em;
+    height: 35em;
+    background: red;
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
-    border-radius: 0.6em;
-    box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
 }
 
 .stats-container {
-    display: flex;
+    text-align: center;
     
+}
+
+#timer p {
+    text-align: center;
+        color: white;
+        text-decoration: none;
+        width: 250px;
+        height: 50px;
+        cursor: pointer;
+        font-size: 1.5em;
+        text-shadow: 2px 0 #000,
+            -2px 0 #000,
+            0 2px #000,
+            0 -2px #000,
+            1px 1px #000,
+            -1px -1px #000,
+            1px -1px #000,
+            -1px 1px #000;
+        
+}
+
+#moves p {
+    text-align: center;
+        color: white;
+        text-decoration: none;
+        width: 250px;
+        height: 50px;
+        cursor: pointer;
+        font-size: 1.5em;
+        text-shadow: 2px 0 #000,
+            -2px 0 #000,
+            0 2px #000,
+            0 -2px #000,
+            1px 1px #000,
+            -1px -1px #000,
+            1px -1px #000,
+            -1px 1px #000;
+        
+       
 }
 
 .memorycards {
-    position: relative;
-    width: 100%;
+    
     column-count: 3;
+    margin: 1em;
 }
 
 
-.responsive {
+.card {
     
-    width: auto;
+    width: 99%;
     height: auto; 
+
+}
+
+#stopbutton {
+    width: 8em;
+    height: 2em;
+    align-self: center;
+    margin-bottom: 1em;
 }
 
 /* Media query: large or landscape phones (576px and up) */
