@@ -11,6 +11,8 @@ font-family: 'Kdam Thmor Pro', sans-serif;
     
 }
 
+/* INDEX.HTML PAGE */
+
 .header {
     color: white;
     font-size: 3rem;
@@ -29,6 +31,12 @@ font-family: 'Kdam Thmor Pro', sans-serif;
         width: 100%;
 }
 
+#letsgo-button  {
+    display: flex;
+    text-align: center;
+}
+
+/* GAME-AREA.HTML PAGE */
 .game-area {
 
     box-sizing: border-box;
