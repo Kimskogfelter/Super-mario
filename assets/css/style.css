@@ -163,10 +163,25 @@ body {
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+
+    
 }
 
 /* Media query: Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
+
+/* GAME-AREA.HTML PAGE */
+
+.game-area {
+        width: 35em;
+        height: 25em;
+    }
+
+    .memorycards {
+
+        column-count: 4;
+        margin: 1em;
+    }
 }
 
 /* Media query: Screens bigger then 1200px */
