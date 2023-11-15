@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    background: red;
+    /*link to google fonts*/
+font-family: 'Kdam Thmor Pro', sans-serif;
+    
+}
+
+.header {
+    color: white;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    text-shadow: 2px 0 #000,
+        -2px 0 #000,
+        0 2px #000,
+        0 -2px #000,
+        1px 1px #000,
+        -1px -1px #000,
+        1px -1px #000,
+        -1px 1px #000;
+}
+
+.game-area {
+
+    box-sizing: border-box;
+    width: 26, 87em;
+    padding: 2.5em 3em;
+    background: #fff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 0.6em;
+    box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+}
+
+.memory-cards {
+    position: relative;
+    width: 100%;
+    display: grid;
+}

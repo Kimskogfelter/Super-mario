@@ -1,39 +1,207 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Welcome to my second project
 
-Welcome,
+## SUPER MARIO - THE MEMORY GAME
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![picture of the mockup of the website](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/readme/mockup-safari-retreat.webp)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
-
-## Codeanywhere Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
-
-`python3 -m http.server`
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
-
-`http_server`
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### PURPOSE
 
 ---
 
-Happy coding!
+ My first thought when starting this project was to make a fun and easy game for my two toddler boys who love Super Mario at the moment. And what game can be better then a memory game that includes pictures of different creatures from the Super Mario game. A memory game fits everyone who wants to train their memory and speed skill. Both kids and adults can play due to its easy design and mecanics. The user need to find two pictures of the same creature to score a point. The game got a timer that starts as soon as you press "play". The user can also pause the game at the same button that says "play" at the beginning of entering the page. As soon as you press "play" the button changes to "stop game" and the user can deside to pause the game when they need to. The timer continues to count until the user have found all the matching cards. The game also got a "moves" tracker who shows how many moves a user has taken during the game.  
+
+### UX DESIGN
+
+---
+
+#### USER STORIES
+
+- #### As a first time user
+
+  - I want to be intriged to play the game
+  - I want to feel amused by the game
+  - I want to feel exited when playing the game
+  - I want a break from everything else around me and get a quick brain workout
+  
+- #### As a returning and frequent user
+
+  - I want to get a break and get a quick brain workout
+  
+#### All users are enabled to play both on the computer and on their mobile phones
+
+### STRUCTURE
+
+---
+
+#### MAIN PAGE
+
+- The website got one page which is the game page.
+
+### FEATURES
+
+---
+
+#### HEADER
+
+- The header is at the top of the website and contains a image of Super Mario with the text "Super Mario - Memory Game".
+- Its purpose is to make the user interested in the game and make them want to stay and play.
+
+![picture of the header for screens bigger then 768px](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/header-and-navbar.jpg)
+
+#### GAME AREA
+
+- #### MOVES SECTION
+
+  - The memory game has a section that counts how many moves the user does during the game
+
+![picture of the moves section](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/hero-image.jpg)
+
+- #### TIMER SECTION
+
+  - The timer starts as soon as the user press "play" and stops when the player completes game or pause the game.
+
+![picture of the timer section](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/retreat-section.jpg)
+
+- #### MEMORY CARDS
+
+  - The memory cards is used to play the game. The user click on one to switch the card and then chooses another one in hope that they are the matching pair.
+  - The front of the cards is the question block from the Super Mario game.
+  - When a user click on one card a creature from the Super Mario game appears.
+
+![picture of the memory cards](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/safari-section.jpg)
+
+- #### PLAY/PAUSE BUTTON
+
+- At the bottom of the game area is a "play/pause" button which the user press to start and pause the game.
+
+![picture of the "play/pause" button](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/safari-gallery-page.jpg)
+
+### COLOR SCHEME
+
+---
+
+- The color scheme through the whole page is #.
+
+### TECHNOLOGIES
+
+---
+
+- icons [https://fontawesome.com/]
+- [https://validator.w3.org/nu/] to validate html code
+- [https://jigsaw.w3.org/css-validator/] to validate css code
+- [https://www.shutterstock.com/sv/explore/standout20-promo?cr=ec&ds_ag=FF%3DBrand-Shutterstock_Exact_AU%3DProspecting&ds_agid=58700002001545688&ds_cid=71700000017552442&ds_eid=700000001508228&gclid=EAIaIQobChMI5LSjgZXDggMVIkeRBR0cCwXqEAAYASAAEgJRrvD_BwE&gclsrc=aw.ds&kw=shutterstock&pl=PPC_GOO_SE_BD-204760450203&utm_campaign=CO%3DSE_LG%3DSV_BU%3DIMG_AD%3DBRAND_TS%3Dlggeneric_RG%3DEUAF_AB%3DACQ_CH%3DSEM_OG%3DCONV_PB%3DGoogle&utm_medium=cpc&utm_source=GOOGLE] for images
+- favicon from [https://fontawesome.com/icons/block-question?f=classic&s=duotone&pc=%23dcb218&sc=%23dcb218]
+- used [https://favicon.io/favicon-converter/] to generate the favicon
+- [https://www.remove.bg/] to remove background from favicon
+
+### WIREFRAMES
+
+---
+
+#### HOME PAGE
+
+![Main page made in wireframes](https://github.com/Kimskogfelter/Super-mario/blob/main/assets/images/wireframe/memory-game-wireframe.pdf)
+
+### TESTING
+
+---
+
+- I tested the website in Chrome, Firefox and Edge browser to see that all pages loaded and that every link, button, form, image and navigation menu was working
+- The site is also responsive which I tested in google chromes devtools by selecting different screensizes and test each function
+- I tested that all text is easy to read and to understand
+- The code got valified through both CSS and HTML validators
+
+#### BUGS
+
+- when I first deployed this project the images and css code didnt work. the solution was to correct all the pathways to relative ones insted of absolute.
+
+#### LIGHTHOUSE
+
+#### I also tested the website in Lighthouse with the result below
+
+- #### Home Page - Mobile version
+
+![lighthouse result for home page, mobile version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/Homepage-mobile.webp)
+
+- #### Home Page - Desktop version
+
+![lighthouse result for home page, desktop version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/Homepage-desktop.webp)
+
+- #### Safari Gallery Page - Mobile version
+
+![lighthouse result for safari gallery page, mobile version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/Safarigallery-mobile.webp)
+
+- #### Safari Gallery Page - Desktop version
+
+![lighthouse result for safari gallery page, desktop version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/Safarigallery-desktop.webp)
+
+- #### Booking Page - Mobile version
+
+![lighthouse result for booking page, mobile version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/bookingpage-mobile.webp)
+
+- #### Booking Page - Desktop version
+
+![lighthouse result for booking page, desktop version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/bookingpage-desktop.webp)
+
+- #### Contact Us Page - Mobile version
+
+![lighthouse result for contact us page, mobile version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/contactus-mobile.webp)
+
+- #### Contact Us Page - Desktop version
+
+![lighthouse result for contact us page, desktop version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/contactus-desktop.webp)
+
+- #### Booking Page, Thank you Page - Mobile version
+
+![lighthouse result for booking pages, thank you page, mobile version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/bookingpage-thankyou-page-mobile.webp)
+
+- #### Booking Page, Thank you page - Desktop version
+
+![lighthouse result for booking pages, thank you page, desktop version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/bookingpage-thankyou-page-deskttop.webp)
+
+- #### Contact Page, Thank you page - Mobile version
+
+![lighthouse result for contact us pages, thank you page, mobile version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/contactus-thankyou-page-mobile.webp)
+
+- #### Contact Page, Thank you page - Desktop version
+
+![lighthouse result for contact us pages, thank you page, desktop version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/contactus-thankyou-page-desktop.webp)
+
+### DEPLOYMENT
+
+---
+    This project was deployed to Github.com. The following steps shows how you do it:
+
+1. Log in to your Github.
+2. Go to the Safari Retreat repository in Github: [https://github.com/Kimskogfelter/Safari-Retreat]
+3. Select Settings in the repository navigation menu at the top.
+4. Select Pages at the left handside of the website.
+5. Choose: Deploy from a branch as Source.
+6. Choose: Main as branch and /root as folder and press save.
+7. Wait a few minutes and press the Code menu to the top left.
+8. At the right handside go to Deployment.
+9. Then press the ![picture of the deployment icon on github](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/deployment-icon.jpg) to go to the live website.
+
+### ISSUES
+
+- The form in the Booking page looks squished together in the firefox browser only. All the other pages looks like they should in firefox, edge and chrome
+- The IDE i was working with (Code Anywhere) have been very buggy during this time ive been working with this project. The last two weeks I couldnt see any changes I made unless I commited and pushed to Git. Which have made the project get many commits
+
+### CREDITS
+
+---
+
+#### MEDIA
+
+- [https://www.pexels.com/sv-se/] and [https://pikwizard.com/] for images
+
+#### CODE
+
+- The code for the social media links in the footer are taken from Love Running project. [https://github.com/Code-Institute-Solutions/Love-Running-Solutions.git]
+- the media querys comments in css are taken from Love Running project. [https://github.com/Code-Institute-Solutions/Love-Running-Solutions.git]
+- used information from the site, [https://stackoverflow.com/questions/50178709/set-my-logo-to-the-left-and-navigation-menu-to-the-right-using-flexbox] to make the toggle navigation menu stick to the right side
+- used [https://blog.hubspot.com/website/center-div-css#center-div-css] to center the informations text div
+- code for the hero slide was taken from [https://www.youtube.com/watch?v=Ef8LxpRPGRA]
+- code for the meta tags for the search engines results are from the Love Running project [https://github.com/Code-Institute-Solutions/Love-Running-Solutions.git]
+
+#### All the thanks to the lovely students on slack for helping out when needed and my tutor Ronan for being so supportive and helpfull
