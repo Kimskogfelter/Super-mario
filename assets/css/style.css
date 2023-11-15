@@ -32,8 +32,8 @@ font-family: 'Kdam Thmor Pro', sans-serif;
 .game-area {
 
     box-sizing: border-box;
-    width: 35em;
-    height: 50em;
+    width: 20em;
+    height: 40em;
     padding: 2.5em 3em;
     background: #fff;
     position: absolute;
