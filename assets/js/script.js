@@ -1,1 +1,2 @@
-let 
+let timer;
+let memoryCards = []
