@@ -33,26 +33,43 @@
 
 ---
 
-#### INDEX PAGE
+#### STARTING PAGE
 
-- The website got one page which is the game page.
+- The first page a user enters is the starting page. It has the heading text "Super Mario Memomry Game" and a picture of Mario riding on Yoshis back with a little star friend next to them.
+
+![picture of the starting page](assets/images/readme/startpage.jpg)
 
 #### GAME AREA PAGE
 
-- 
+- The game area contains the memory game. It got 12 different cards that the user can click on and pair them in order to continue and win the game.
+
+![picture of the game area page](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/header-and-navbar.jpg)
 
 ### FEATURES
 
 ---
 
-#### HEADER
+#### STARTING PAGE
 
-- The header is at the top of the website and contains a image of Super Mario with the text "Super Mario - Memory Game".
-- Its purpose is to make the user interested in the game and make them want to stay and play.
+- #### HEADING
 
-![picture of the header for screens bigger then 768px](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/header-and-navbar.jpg)
+- The heading text is at the top of the website and contains the text "Super Mario - Memory Game". Its purpose is to make the user understand what type of game it is that they are going to play.
 
-#### GAME AREA
+![picture of the heading on the starting page](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/header-and-navbar.jpg)
+
+- #### IMAGE
+  
+- The image of Super Mario on Yoshi is under the heading to make the user understand that the game is about Super Mario
+
+![picture of the image with Super Mario and Yoshi on the starting page](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/header-and-navbar.jpg)
+
+- #### "LETS GO" BUTTON
+  
+- Under Super Mario and Yoshi is a button that says "Lets go!". If the user click on the button it takes them to the game page.
+
+![picture of the "lets go" button on the starting page](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/header-and-navbar.jpg)
+
+#### GAME AREA PAGE
 
 - #### MOVES SECTION
 
@@ -62,7 +79,7 @@
 
 - #### TIMER SECTION
 
-  - The timer starts as soon as the user press "play" and stops when the player completes game or pause the game.
+  - The timer starts as soon as the user press "play" and stops when the player completes or pause the game.
 
 ![picture of the timer section](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/retreat-section.jpg)
 
@@ -84,13 +101,12 @@
 
 ---
 
-- The color scheme through the whole page is #.
+- The color scheme through both pages is a #red background and #white text with a #black border around the text. The buttons to start/pause the game got a grey background color.
 
 ### TECHNOLOGIES
 
 ---
 
-- icons [https://fontawesome.com/]
 - [https://validator.w3.org/nu/] to validate html code
 - [https://jigsaw.w3.org/css-validator/] to validate css code
 - [https://freepngimg.com/] for images
