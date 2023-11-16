@@ -176,6 +176,7 @@ button {
         margin-top: 1em;
         border: #000 2px solid;
         border-radius: 0.5em;
+    
 }
 
 #stopbutton {
@@ -201,6 +202,8 @@ button {
         margin-top: 1em;
         border: #000 2px solid;
         border-radius: 0.5em;
+        display: none;
+        
 }
 
 .controls {
