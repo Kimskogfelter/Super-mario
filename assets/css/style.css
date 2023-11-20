@@ -77,9 +77,8 @@ button {
 
 .game-area {
 
-    
-    width: 25em;
-    height: 35em;
+    width: 28em;
+    height: 30em;
     background: red;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -88,6 +87,8 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: auto;
+    margin-top: 5em;
    
 }
 
@@ -144,9 +145,6 @@ button {
     grid-template-columns: repeat(3, 150px);
     grid-template-rows: repeat(4, 150px);
     width: max-content;
-    gap: 20px;
-
-    
 }
 
 .card {
@@ -235,6 +233,13 @@ button {
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+
+    .game-area {
+            width: 30em;
+            height: 35em;
+            margin-top: 0;
+    
+        }
 
     
 }
