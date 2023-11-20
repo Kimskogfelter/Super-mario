@@ -77,7 +77,6 @@ button {
 
 .game-area {
 
-    width: 28em;
     height: 30em;
     background: red;
     position: absolute;
@@ -88,13 +87,15 @@ button {
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    margin-top: 5em;
+    margin-top: 0.5em;
    
 }
 
 .stats-container {
     display: flex;
     justify-content: space-evenly;
+    height: 3em;
+    margin-bottom: 1em;
     
 }
 
@@ -140,10 +141,10 @@ button {
 
 .memorycards {
     
-    margin: 1em;
+    
     display: grid;
-    grid-template-columns: repeat(3, 150px);
-    grid-template-rows: repeat(4, 150px);
+    grid-template-columns: repeat(3, 130px);
+    grid-template-rows: repeat(4, 130px);
     width: max-content;
 }
 
@@ -231,8 +232,11 @@ button {
    
 }
 
+
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+
+    /* GAME-AREA.HTML PAGE */
 
     .game-area {
             width: 30em;
@@ -240,6 +244,15 @@ button {
             margin-top: 0;
     
         }
+
+    .memorycards {
+        
+        margin: 1em;
+        display: grid;
+        grid-template-columns: repeat(3, 150px);
+        grid-template-rows: repeat(4, 150px);
+        width: max-content;
+                }
 
     
 }
