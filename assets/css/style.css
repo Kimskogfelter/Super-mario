@@ -145,10 +145,12 @@ button {
     grid-template-rows: repeat(4, 150px);
     width: max-content;
     gap: 20px;
+
+    
 }
 
 .card {
-    width: calc(33.33% - 20px);
+    
     margin: 10px;
     background-color: transparent;
     cursor: pointer;
@@ -159,6 +161,8 @@ button {
     position: relative;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    height: 100%;
+    width: 100%;
 
 }
 
