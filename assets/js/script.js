@@ -4,7 +4,8 @@ let moves = document.getElementById('moves');
 let memoryCardImages = ["assets/images/toad.png", "assets/images/toad.png", "assets/images/super-mario.png", "assets/images/super-mario.png", "assets/images/super-mario.png",
 "assets/images/scared-boo.png", "assets/images/scared-boo.png", "assets/images/princess-peach.png", "assets/images/princess-peach.png",
     "assets/images/bowser.png", "assets/images/bowser.png", "assets/images/goomba.png", "assets/images/goomba.png"];
-
+const timerElement = document.getElementById('timer');
+const restartButton = document.getElementById('restartbutton');
 let card1;
 let card2;
 let cardPair = [card1, card2];
@@ -21,17 +22,8 @@ function checkMatchingCards () {
 function matchingCards () {
 
 }
+    
 
-
-
-/* new code */
-
-
-    // Get the timer element
-    const timerElement = document.getElementById('timer');
-
-    // Get the restart button
-    const restartButton = document.getElementById('restartbutton');
 
     // Set initial time
     let seconds = 0;

@@ -91,9 +91,9 @@
 
 ![picture of the memory cards](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/safari-section.jpg)
 
-- #### PLAY/PAUSE BUTTON
+- #### RESTART BUTTON
 
-- At the bottom of the game area is a "play/pause" button which the user press to start and pause the game.
+- At the bottom of the game area is a restart" button which the user can click on to restart the game.
 
 ![picture of the "play/pause" button](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/safari-gallery-page.jpg)
 
