@@ -97,7 +97,7 @@ button {
     
 }
 
-#timer p {
+#timer {
     
         color: white;
         text-decoration: none;
@@ -117,7 +117,7 @@ button {
         
 }
 
-#moves p {
+#moves {
     
         color: white;
         text-decoration: none;
@@ -152,7 +152,7 @@ button {
 
 }
 
-#startbutton {
+#restartbutton {
     width: 8em;
         height: 3em;
         background-color: lightgray;
@@ -177,33 +177,6 @@ button {
         border: #000 2px solid;
         border-radius: 0.5em;
     
-}
-
-#stopbutton {
-  
-    align-self: center;
-    margin-bottom: 1em;
-    background-color: lightgray;
-    text-align: center;
-        color: white;
-    width: 8em;
-        height: 3em;
-        cursor: pointer;
-        font-size: 1.2em;
-        text-shadow: 2px 0 #000,
-            -2px 0 #000,
-            0 2px #000,
-            0 -2px #000,
-            1px 1px #000,
-            -1px -1px #000,
-            1px -1px #000,
-            -1px 1px #000;
-        text-transform: uppercase;
-        margin-top: 1em;
-        border: #000 2px solid;
-        border-radius: 0.5em;
-        display: none;
-        
 }
 
 .controls {
