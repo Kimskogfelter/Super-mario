@@ -158,7 +158,7 @@ button {
 
 .inner-card {
     position: relative;
-    transition: transform 0.8s;
+    transition: transform 0.9s;
     transform-style: preserve-3d;
     height: 100%;
     width: 100%;
@@ -170,7 +170,7 @@ button {
 }
 
 .card.disable .card-revealed {
-    filter: brightness(50%);
+    filter: brightness(40%);
 }
 
 .card-revealed, .card-front {
@@ -185,6 +185,24 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.card-front {
+    background-color: red;
+    color: red;
+}
+
+.card-revealed {
+    background-color: aliceblue;
+    color:aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+}
+
+.card-revealed img {
+
 }
 
 .card-image {
