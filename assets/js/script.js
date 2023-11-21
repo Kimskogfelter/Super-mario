@@ -169,28 +169,29 @@ let tempForFlippedCards = []
         // Check if all pairs are matched
         if (matchingPairs === characters.length) {
             // Call a function to show the "You Won" overlay
-            showWinOverlay();
+            showWinResult();
         }
     }
 
-    // To show win overlay
-    function showWinOverlay() {
-        const overlay = document.createElement("div");
-        overlay.classList.add("overlay");
+    // To show the result when a user wins the game
+    function showWinResult() {
+        const winResult = document.createElement("div");
+        winResult.classList.add("win-result");
 
-        const message = document.createElement("div");
-        message.classList.add("win-message");
-        message.textContent = "You Won!";
+        const winMessage = document.createElement("div");
+        winMessage.classList.add("winning-message");
+        winMessage.textContent = "You made it! Congratulations!";
 
-        const restartButtonOverlay = document.createElement("button");
-        restartButtonOverlay.textContent = "Play Again";
-        restartButtonOverlay.addEventListener("click", restartGame);
+        const winRestartButton = document.createElement("button");
+        winRestartButton.textContent = "Play One More Time";
+        // Add click event listener to the restart button that appears when you win the game
+        winRestartButton.addEventListener("click", restartGame);
 
-        overlay.appendChild(message);
-        overlay.appendChild(restartButtonOverlay);
+        winResult.appendChild(winMessage);
+        winResult.appendChild(winRestartButton);
 
-        // Append the overlay to the game container
-        gameContainer.appendChild(overlay);
+        // Append the win result to the game container
+       memoryCards.appendChild(winResult);
     }
 
 
@@ -204,7 +205,7 @@ let tempForFlippedCards = []
         seconds = 0;
         moves = 0;
 
-        // so game container could be empty if it had anything we can than use it for restart game
+        // removes all the memory cards so the front side is up again
         memoryCards.innerHTML = "";
 
         // Restart the game
