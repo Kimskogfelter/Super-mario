@@ -224,8 +224,6 @@ width: 90%;
         background-color: lightgray;
         align-self: center;
         margin-bottom: 1em;
-    
-        text-align: center;
         color: white;
       
         cursor: pointer;
@@ -242,6 +240,9 @@ width: 90%;
         margin-top: 1em;
         border: #000 2px solid;
         border-radius: 0.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     
 }
 
