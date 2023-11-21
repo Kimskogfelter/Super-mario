@@ -21,7 +21,7 @@ let tempForFlippedCards = []
     let seconds = 0;
     let timerInterval;
 
-    /* creates the memorycard */
+    // creates the memorycard 
     function createMemoryCard() {
         const card = document.createElement("div");
         card.classList.add("card");
@@ -132,25 +132,6 @@ let tempForFlippedCards = []
         }
     }
 
-    //function taking 2 argument (card id) and adding disabled class to it which means its matched
-    function markAsMatched(id) {
-        const cards = document.querySelectorAll(".card");
-
-        cards.forEach((card) => {
-            if (card.id === id) {
-                card.classList = ["card disabledcard click"];
-            }
-        });
-
-        // Increment the matchedPairs count
-        matchedPairs++;
-
-        // Check if all pairs are matched
-        if (matchedPairs === logos.length) {
-            // Call a function to show the "You Won" overlay
-            showWinOverlay();
-        }
-    }
 
     // Unflipping all the card but not those who are already matched
     function unflippingCard() {
@@ -170,21 +151,74 @@ let tempForFlippedCards = []
         movesElement.textContent = ` Moves: ${String(moves).padStart(1, "0")}`;
     }
 
-    // Function to restart the timer
-    function restartTimer() {
-        // Clear the interval
-        clearInterval(timerInterval);
+   
 
-        // Start the timer again
+    //function taking 2 argument (card id) and adding disabled class to it which means its matched
+    function markAsMatched(id) {
+        const cards = document.querySelectorAll(".card");
+
+        cards.forEach((card) => {
+            if (card.id === id) {
+                card.classList = ["card disabledcard click"];
+            }
+        });
+
+        // Add to the matchedPairs count
+        matchingPairs++;
+
+        // Check if all pairs are matched
+        if (matchingPairs === characters.length) {
+            // Call a function to show the "You Won" overlay
+            showWinOverlay();
+        }
+    }
+
+    // To show win overlay
+    function showWinOverlay() {
+        const overlay = document.createElement("div");
+        overlay.classList.add("overlay");
+
+        const message = document.createElement("div");
+        message.classList.add("win-message");
+        message.textContent = "You Won!";
+
+        const restartButtonOverlay = document.createElement("button");
+        restartButtonOverlay.textContent = "Play Again";
+        restartButtonOverlay.addEventListener("click", restartGame);
+
+        overlay.appendChild(message);
+        overlay.appendChild(restartButtonOverlay);
+
+        // Append the overlay to the game container
+        gameContainer.appendChild(overlay);
+    }
+
+
+    // Function to restart the game when the restart game button is clicked
+
+    function restartGameButton() {
+        // Clear the timer interval
+        clearInterval(timerInterval);
+        // Reset variables
+        characterCounts = {};
+        seconds = 0;
+        moves = 0;
+
+        // so game container could be empty if it had anything we can than use it for restart game
+        memoryCards.innerHTML = "";
+
+        // Restart the game
+        startGame();
+
+        // Update the UI
+        updateUI();
+
+        // restart timer
         startTimer();
     }
 
     // Add click event listener to the restart button
-    restartButton.addEventListener('click', restartTimer);
-
-    // Start the timer when the page is loaded
-    startTimer();
-
+    restartButton.addEventListener('click', restartGameButton);
 
     
  /* starts the game */
@@ -203,5 +237,9 @@ let tempForFlippedCards = []
     }
     }
 
+
+
+    // Start the timer when the page is loaded
+    startTimer();
     startGame();
 });
