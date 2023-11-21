@@ -1,12 +1,16 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 let movesElement = document.getElementById('moves');
-/* this array contains the images for the revealed card */
+// this array contains the images for the revealed card 
 let characters = ["assets/images/toad.png", "assets/images/super-mario.png", 
 "assets/images/scared-boo.png", "assets/images/princess-peach.png",
     "assets/images/bowser.png", "assets/images/goomba.png"];
 const timerElement = document.getElementById('timer');
 const restartButton = document.getElementById('restartbutton');
+// gets the element with the class memorycards
+const memoryCards = document.querySelector(".memorycards");
+// temp array for flipped cards
+let tempForFlippedCards = []
 
 
 
@@ -16,6 +20,56 @@ const restartButton = document.getElementById('restartbutton');
     // Set initial time
     let seconds = 0;
     let timerInterval;
+
+    /* creates the memorycard */
+    function createMemoryCard() {
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        const innerCard = document.createElement("div");
+        innerCard.classList.add("inner-card");
+
+        const cardFront = document.createElement("div");
+        cardFront.classList.add("card-front");
+
+        const cardRevealed = document.createElement("div");
+        cardRevealed.classList.add("card-revealed");
+
+        innerCard.appendChild(cardFront);
+        innerCard.appendChild(cardRevealed);
+
+        card.appendChild(innerCard);
+
+        return card;
+    }
+
+
+    let characterCounts = {};
+    // function to add image to the revealed card 
+    function addImageToMemoryCard(card) {
+        const cardRevealed = card.querySelector(".card-revealed");
+
+        // characters index
+        let characterIndex;
+
+        do {
+            characterIndex = Math.floor(Math.random() * characters.length);
+        } while (characterCounts[characterIndex] >= 2);
+        characterCounts[characterIndex] = (characterCounts[characterIndex] || 0) + 1;
+
+        // adding character index to card for furthur use
+        card.setAttribute("id", characterIndex);
+
+        // creating image
+        const image = document.createElement("img");
+        image.src = characters[characterIndex];
+
+        cardRevealed.append(image);
+
+        return card;
+
+    }
+
 
     // Function to update the timer display
     function updateTimer() {
@@ -39,31 +93,7 @@ const restartButton = document.getElementById('restartbutton');
         timerInterval = setInterval(updateTimer, 1000);
     }
 
-    // Function to restart the timer
-    function restartTimer() {
-        // Clear the interval
-        clearInterval(timerInterval);
-
-        // Start the timer again
-        startTimer();
-    }
-
-    // Add click event listener to the restart button
-    restartButton.addEventListener('click', restartTimer);
-
-    // Start the timer when the page is loaded
-    startTimer();
-
-
-
-    /* NEW CODE */
-
-
-    /* gets the element with the class memorycards */
-    const memoryCards = document.querySelector(".memorycards");
-
-    // temp array for flipped cards
-    let tempForFlippedCards = []
+   
 
     // checks if cards match
     function checkIfCardsMatch (card) 
@@ -140,55 +170,23 @@ const restartButton = document.getElementById('restartbutton');
         movesElement.textContent = ` Moves: ${String(moves).padStart(1, "0")}`;
     }
 
-    /* creates the memorycard */
-    function createMemoryCard () {
-        const card = document.createElement("div");
-        card.classList.add("card");
+    // Function to restart the timer
+    function restartTimer() {
+        // Clear the interval
+        clearInterval(timerInterval);
 
-        const innerCard = document.createElement("div");
-        innerCard.classList.add("inner-card");
-
-        const cardFront = document.createElement("div");
-        cardFront.classList.add("card-front");
-
-        const cardRevealed = document.createElement("div");
-        cardRevealed.classList.add("card-revealed");
-
-        innerCard.appendChild(cardFront);
-        innerCard.appendChild(cardRevealed);
-
-        card.appendChild(innerCard);
-
-        return card;
+        // Start the timer again
+        startTimer();
     }
 
+    // Add click event listener to the restart button
+    restartButton.addEventListener('click', restartTimer);
 
-    let characterCounts = {};
-        // function to add image to the revealed card 
-    function addImageToMemoryCard(card) { 
-        const cardRevealed = card.querySelector(".card-revealed");
+    // Start the timer when the page is loaded
+    startTimer();
 
-        // characters index
-        let characterIndex;
 
-        do {
-            characterIndex = Math.floor(Math.random() * characters.length);
-        } while (characterCounts[characterIndex] >= 2);
-        characterCounts[characterIndex] = (characterCounts[characterIndex] || 0) + 1;
-
-        // adding character index to card for furthur use
-        card.setAttribute("id", characterIndex);
-
-        // creating image
-        const image = document.createElement("img");
-        image.src = characters[characterIndex];
-
-        cardRevealed.append(image);
-
-        return card;
-
-    }
-
+    
  /* starts the game */
     function startGame () {
         for (let i = 0; i < 12; i++) {

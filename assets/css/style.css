@@ -174,7 +174,7 @@ button {
     transform: rotateY(180deg);
 }
 
-.card.disable .card-revealed {
+.card.disabledcard .card-revealed {
     filter: brightness(40%);
 }
 
@@ -186,20 +186,14 @@ button {
     height: 100%;
 }
 
-.card-revealed {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .card-front {
     background-color: red;
     color: red;
 }
 
 .card-revealed {
-    background-color: aliceblue;
-    color:aliceblue;
+    background-color: red;
+    color:red;
     display: flex;
     align-items: center;
     justify-content: center;
