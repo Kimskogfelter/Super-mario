@@ -56,7 +56,9 @@ const restartButton = document.getElementById('restartbutton');
 
 
 
-    /* new code */
+    /* NEW CODE */
+
+
     /* gets the element with the class memorycards */
     const memoryCards = document.querySelector(".memorycards");
 
@@ -81,16 +83,35 @@ const restartButton = document.getElementById('restartbutton');
 
         return card;
     }
+
+    /* creates a var for the character counts to be able to match the cards */
+    let characterCounts = {};
+
+    function addImageToMemoryCard(card) { 
+        const cardRevealed = card.querySelector(".card-revealed");
+
+        //* characters index
+        let characterIndex;
+
+        do {
+            characterIndex = Math.floor(Math.random() * characters.length);
+        } while (characterCounts[characterIndex] >= 2);
+        characterCounts[characterIndex] = (characterCounts[characterIndex] || 0) + 1;
+
+    }
+
  /* starts the game */
     function startGame () {
         for (let i = 0; i < 12; i++) {
         const card = createMemoryCard();
+
+        const cardWithImage=addImageToMemoryCard(card)
     
         card.addEventListener("click", () => {
             card.classList.add("click");
         });
 
-        memoryCards.appendChild(card);
+        memoryCards.appendChild(cardWithImage);
     }
     }
 
