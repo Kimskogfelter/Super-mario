@@ -2,9 +2,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 let moves = document.getElementById('moves');
 /* this array contains the images for the revealed card */
-let characters = [".assets/images/toad.png", ".assets/images/toad.png", ".assets/images/super-mario.png", ".assets/images/super-mario.png", ".assets/images/super-mario.png",
-".assets/images/scared-boo.png", ".assets/images/scared-boo.png", ".assets/images/princess-peach.png", ".assets/images/princess-peach.png",
-    ".assets/images/bowser.png", ".assets/images/bowser.png", ".assets/images/goomba.png", ".assets/images/goomba.png"];
+let characters = ["assets/images/toad.png", "assets/images/super-mario.png", 
+"assets/images/scared-boo.png", "assets/images/princess-peach.png",
+    "assets/images/bowser.png", "assets/images/goomba.png"];
 const timerElement = document.getElementById('timer');
 const restartButton = document.getElementById('restartbutton');
 
@@ -84,7 +84,7 @@ const restartButton = document.getElementById('restartbutton');
         return card;
     }
 
-    /* creates a var for the character counts to be able to match the cards */
+
     let characterCounts = {};
 
     function addImageToMemoryCard(card) { 
@@ -97,6 +97,17 @@ const restartButton = document.getElementById('restartbutton');
             characterIndex = Math.floor(Math.random() * characters.length);
         } while (characterCounts[characterIndex] >= 2);
         characterCounts[characterIndex] = (characterCounts[characterIndex] || 0) + 1;
+
+        // adding character index to card for furthur use
+        card.setAttribute("id", characterIndex);
+
+        // creating image
+        const image = document.createElement("img");
+        image.src = characters[characterIndex];
+
+        cardRevealed.append(image);
+
+        return card;
 
     }
 
