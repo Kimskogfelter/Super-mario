@@ -6,22 +6,9 @@ let memoryCardImages = ["assets/images/toad.png", "assets/images/toad.png", "ass
     "assets/images/bowser.png", "assets/images/bowser.png", "assets/images/goomba.png", "assets/images/goomba.png"];
 const timerElement = document.getElementById('timer');
 const restartButton = document.getElementById('restartbutton');
-let card1;
-let card2;
-let cardPair = [card1, card2];
 
 
-function flipCard () {
 
-}
-
-function checkMatchingCards () {
-
-}
-
-function matchingCards () {
-
-}
     
 
 
@@ -65,4 +52,34 @@ function matchingCards () {
 
     // Start the timer when the page is loaded
     startTimer();
+
+
+
+    /* new code */
+
+    function createCard () {
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        const innerCard = document.createElement("div");
+        innerCard.classList.add("inner-card");
+
+        const cardFront = document.createElement("div");
+        cardFront.classList.add("card-front");
+
+        const cardRevealed = document.createElement("div");
+        cardRevealed.classList.add("card-revealed");
+
+        innerCard.appendChild(cardFront);
+        innerCard.appendChild(cardRevealed);
+
+        card.appendChild(innerCard);
+
+        return card;
+    }
+
+    function rendergame () {
+        for (let i = 0; i < 12; i++) {
+        const card = createCard(); }
+    }
 });
