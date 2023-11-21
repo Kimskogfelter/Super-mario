@@ -1,9 +1,10 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 let moves = document.getElementById('moves');
-let memoryCardImages = ["assets/images/toad.png", "assets/images/toad.png", "assets/images/super-mario.png", "assets/images/super-mario.png", "assets/images/super-mario.png",
-"assets/images/scared-boo.png", "assets/images/scared-boo.png", "assets/images/princess-peach.png", "assets/images/princess-peach.png",
-    "assets/images/bowser.png", "assets/images/bowser.png", "assets/images/goomba.png", "assets/images/goomba.png"];
+/* this array contains the images for the revealed card */
+let characters = [".assets/images/toad.png", ".assets/images/toad.png", ".assets/images/super-mario.png", ".assets/images/super-mario.png", ".assets/images/super-mario.png",
+".assets/images/scared-boo.png", ".assets/images/scared-boo.png", ".assets/images/princess-peach.png", ".assets/images/princess-peach.png",
+    ".assets/images/bowser.png", ".assets/images/bowser.png", ".assets/images/goomba.png", ".assets/images/goomba.png"];
 const timerElement = document.getElementById('timer');
 const restartButton = document.getElementById('restartbutton');
 
@@ -56,8 +57,11 @@ const restartButton = document.getElementById('restartbutton');
 
 
     /* new code */
+    /* gets the element with the class memorycards */
+    const memoryCards = document.querySelector(".memorycards");
 
-    function createCard () {
+    /* creates the memorycard */
+    function createMemoryCard () {
         const card = document.createElement("div");
         card.classList.add("card");
 
@@ -77,9 +81,18 @@ const restartButton = document.getElementById('restartbutton');
 
         return card;
     }
-
-    function rendergame () {
+ /* starts the game */
+    function startGame () {
         for (let i = 0; i < 12; i++) {
-        const card = createCard(); }
+        const card = createMemoryCard();
+    
+        card.addEventListener("click", () => {
+            card.classList.add("click");
+        });
+
+        memoryCards.appendChild(card);
     }
+    }
+
+    startGame();
 });

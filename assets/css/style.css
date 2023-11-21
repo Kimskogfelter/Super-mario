@@ -170,7 +170,7 @@ button {
 
 }
 
-.card:hover .inner-card {
+.card.click .inner-card {
     transform: rotateY(180deg);
 }
 
