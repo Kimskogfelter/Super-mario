@@ -11,6 +11,8 @@ const restartButton = document.getElementById('restartbutton');
 const memoryCards = document.querySelector(".memorycards");
 // temp array for flipped cards
 let tempForFlippedCards = []
+let matchingPairs = 0;
+let moves = 0;
 
 
 
@@ -108,7 +110,7 @@ let tempForFlippedCards = []
             return;
         }
 
-        // if second card that was click is not equal to first card
+        // if second card that was click is not the same as the first card
         if (tempForFlippedCards.length > 0 && !tempForFlippedCards.includes(card.id)) {
             tempForFlippedCards = [];
 
@@ -122,7 +124,7 @@ let tempForFlippedCards = []
 
             return;
         }
-        // if second card is same as first card
+        // if second card is the same as first card
         if (tempForFlippedCards.length > 0 && tempForFlippedCards.includes(card.id)) {
             tempForFlippedCards = [];
             setTimeout(() => {
@@ -153,7 +155,7 @@ let tempForFlippedCards = []
 
    
 
-    //function taking 2 argument (card id) and adding disabled class to it which means its matched
+    //function taking 2 card ids and adding disabledcard class to it which means its matched
     function markAsMatched(id) {
         const cards = document.querySelectorAll(".card");
 
@@ -167,7 +169,8 @@ let tempForFlippedCards = []
         matchingPairs++;
 
         // Check if all pairs are matched
-        if (matchingPairs === characters.length) {
+       if (matchingPairs === characters.length) {
+           
             // Call a function to show the "You Won" overlay
             showWinResult();
         }
@@ -175,6 +178,8 @@ let tempForFlippedCards = []
 
     // To show the result when a user wins the game
     function showWinResult() {
+
+
         const winResult = document.createElement("div");
         winResult.classList.add("win-result");
 
@@ -185,13 +190,19 @@ let tempForFlippedCards = []
         const winRestartButton = document.createElement("button");
         winRestartButton.textContent = "Play One More Time";
         // Add click event listener to the restart button that appears when you win the game
-        winRestartButton.addEventListener("click", restartGame);
+        winRestartButton.addEventListener("click", restartGameButton);
 
         winResult.appendChild(winMessage);
         winResult.appendChild(winRestartButton);
 
         // Append the win result to the game container
        memoryCards.appendChild(winResult);
+
+        // Clear the timer interval
+        clearInterval(timerInterval);
+        timerInterval = null;
+
+        console.log("showWinResult called");
     }
 
 
