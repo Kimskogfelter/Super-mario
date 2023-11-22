@@ -13,15 +13,11 @@ const memoryCards = document.querySelector(".memorycards");
 let tempForFlippedCards = []
 let matchingPairs = 0;
 let moves = 0;
+// Set initial time
+let seconds = 0;
+let timerInterval;
 
 
-
-    
-
-
-    // Set initial time
-    let seconds = 0;
-    let timerInterval;
 
     // creates the memorycard 
     function createMemoryCard() {
@@ -41,6 +37,16 @@ let moves = 0;
         innerCard.appendChild(cardRevealed);
 
         card.appendChild(innerCard);
+
+        // add image to front card
+        const cardFrontImage = document.createElement("img");
+        cardFrontImage.src = "assets/images/yellow-question-block.png";
+        cardFront.appendChild(cardFrontImage);
+
+        // set dimensions for front card image
+        const frontCardImageDimensions = { width: "100%", height: "100%" };
+        // add dimensions to front card image
+        Object.assign(cardFrontImage.style, frontCardImageDimensions);
 
         return card;
     }
@@ -104,7 +110,7 @@ let moves = 0;
         if (card.classList.contains("disabledcard") || card.classList.contains("click"))
             return;
 
-        // the card clicked was first one
+        // the first card that was clicked
         if (tempForFlippedCards.length === 0) {
             tempForFlippedCards.push(card.id);
             return;
@@ -139,7 +145,7 @@ let moves = 0;
     function unflippingCard() {
         const cards = document.querySelectorAll(".card");
 
-        // we will loop through each card and check if it is disabled means already matched
+        // we will loop through all cards and check if they got the class "disabledcard" which means they are matched
         cards.forEach((card) => {
             if (!card.classList.contains("disabledcard")) {
                 card.classList = ["card"];
