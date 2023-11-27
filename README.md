@@ -98,11 +98,11 @@
 ![picture of the "play/pause" button](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/safari-gallery-page.jpg)
 
 - #### WINNING DIV
+  
 - When a user wins the game a div pops up with the text "You made it! Congratulations!"
 - A button appears below the text that says "Play One More Time" which the user can press to restart the game and play again
 
 ![picture of the div that pops up when the user wins the game](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/safari-gallery-page.jpg)
-
 
 ### COLOR SCHEME
 

@@ -1,20 +1,19 @@
-
 body {
     background: red;
     /*link to google fonts*/
-        font-family: 'Seymour One', sans-serif;
+    font-family: 'Seymour One', sans-serif;
 }
 
 button {
     /*link to google fonts*/
-        font-family: 'Seymour One', sans-serif;
+    font-family: 'Seymour One', sans-serif;
 }
 
 /* INDEX.HTML PAGE */
 
 .index-body {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .header {
@@ -29,11 +28,11 @@ button {
         -1px -1px #000,
         1px -1px #000,
         -1px 1px #000;
-        z-index: 1;
-        position: fixed;
-        text-align: center;
-        width: 100%;
-        margin-top: 2em;
+    z-index: 1;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    margin-top: 2em;
 }
 
 .starting-page-container {
@@ -45,9 +44,9 @@ button {
 
 
 
-#letsgo-button  {
-   
-   text-align: center;
+#letsgo-button {
+
+    text-align: center;
     color: white;
     text-decoration: none;
     width: 250px;
@@ -55,13 +54,13 @@ button {
     cursor: pointer;
     font-size: 2em;
     text-shadow: 2px 0 #000,
-            -2px 0 #000,
-            0 2px #000,
-            0 -2px #000,
-            1px 1px #000,
-            -1px -1px #000,
-            1px -1px #000,
-            -1px 1px #000;
+        -2px 0 #000,
+        0 2px #000,
+        0 -2px #000,
+        1px 1px #000,
+        -1px -1px #000,
+        1px -1px #000,
+        -1px 1px #000;
     text-transform: uppercase;
     margin-top: 1em;
 }
@@ -71,11 +70,10 @@ button {
 
 }
 
-
-
 /* GAME-AREA.HTML PAGE */
 
 .gamearea-body {
+
     display: flex;
     justify-content: center;
 }
@@ -93,68 +91,69 @@ button {
     justify-content: center;
     margin: auto;
     margin-top: 0.5em;
-   
+
 }
 
 .stats-container {
+
     display: flex;
     justify-content: space-evenly;
     height: 3em;
     margin-bottom: 1em;
-    
+
 }
 
 #timer {
-    
-        color: white;
-        text-decoration: none;
-        width: 210px;
-        height: 50px;
-        font-size: 1.3em;
-        text-shadow: 2px 0 #000,
-            -2px 0 #000,
-            0 2px #000,
-            0 -2px #000,
-            1px 1px #000,
-            -1px -1px #000,
-            1px -1px #000,
-            -1px 1px #000;
-        margin-left: 1em;
-        margin-bottom: 0px;
-        
+
+    color: white;
+    text-decoration: none;
+    width: 210px;
+    height: 50px;
+    font-size: 1.3em;
+    text-shadow: 2px 0 #000,
+        -2px 0 #000,
+        0 2px #000,
+        0 -2px #000,
+        1px 1px #000,
+        -1px -1px #000,
+        1px -1px #000,
+        -1px 1px #000;
+    margin-left: 1em;
+    margin-bottom: 0px;
+
 }
 
 #moves {
-    
-        color: white;
-        text-decoration: none;
-        width: 150px;
-        height: 50px;
-        font-size: 1.3em;
-        text-shadow: 2px 0 #000,
-            -2px 0 #000,
-            0 2px #000,
-            0 -2px #000,
-            1px 1px #000,
-            -1px -1px #000,
-            1px -1px #000,
-            -1px 1px #000;
-        margin-bottom: 0px;
-        
-       
+
+    color: white;
+    text-decoration: none;
+    width: 150px;
+    height: 50px;
+    font-size: 1.3em;
+    text-shadow: 2px 0 #000,
+        -2px 0 #000,
+        0 2px #000,
+        0 -2px #000,
+        1px 1px #000,
+        -1px -1px #000,
+        1px -1px #000,
+        -1px 1px #000;
+    margin-bottom: 0px;
+
+
 }
 
 .memorycards {
-    
-    
+
     display: grid;
     grid-template-columns: repeat(3, 130px);
     grid-template-rows: repeat(4, 130px);
     width: max-content;
-}
+   
+    }
 
 .card {
-    
+
     margin: 10px;
     background-color: transparent;
     cursor: pointer;
@@ -175,7 +174,8 @@ button {
 }
 
 
-.card-revealed, .card-front {
+.card-revealed,
+.card-front {
     position: absolute;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -190,7 +190,7 @@ button {
 
 .card-revealed {
     background-color: red;
-    color:red;
+    color: red;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,43 +198,43 @@ button {
 }
 
 .card-revealed img {
-width: 90%;
+    width: 90%;
 }
 
 .card-image {
-    
+
     width: 99%;
-    height: auto; 
+    height: auto;
     cursor: pointer;
 
 }
 
 #restartbutton {
     width: 8em;
-        height: 3em;
-        background-color: lightgray;
-        align-self: center;
-        margin-bottom: 1em;
-        color: white;
-      
-        cursor: pointer;
-        font-size: 1.2em;
-        text-shadow: 2px 0 #000,
-            -2px 0 #000,
-            0 2px #000,
-            0 -2px #000,
-            1px 1px #000,
-            -1px -1px #000,
-            1px -1px #000,
-            -1px 1px #000;
-        text-transform: uppercase;
-        margin-top: 1em;
-        border: #000 2px solid;
-        border-radius: 0.5em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
+    height: 3em;
+    background-color: lightgray;
+    align-self: center;
+    margin-bottom: 1em;
+    color: white;
+
+    cursor: pointer;
+    font-size: 1.2em;
+    text-shadow: 2px 0 #000,
+        -2px 0 #000,
+        0 2px #000,
+        0 -2px #000,
+        1px 1px #000,
+        -1px -1px #000,
+        1px -1px #000,
+        -1px 1px #000;
+    text-transform: uppercase;
+    margin-top: 1em;
+    border: #000 2px solid;
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 #restartbutton:hover {
@@ -271,7 +271,7 @@ width: 90%;
 }
 
 .win-result button {
-width: 8em;
+    width: 8em;
     height: 3em;
     background-color: lightgray;
     align-self: center;
@@ -297,53 +297,45 @@ width: 8em;
     align-items: center;
 }
 
-
-/* Media query: large or landscape phones (576px and up) */
-@media screen and (min-width: 576px) {
-   
-}
-
-
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
 
     /* GAME-AREA.HTML PAGE */
 
     .game-area {
-            width: 30em;
-            height: 35em;
-            margin-top: 0;
-    
-        }
+        width: 30em;
+        height: 35em;
+        margin-top: 0;
+
+    }
 
     .memorycards {
-        
+
         margin: 1em;
         display: grid;
         grid-template-columns: repeat(3, 150px);
         grid-template-rows: repeat(4, 150px);
         width: max-content;
-                }
+    }
 
-    
+
 }
 
 /* Media query: Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
 
-/* GAME-AREA.HTML PAGE */
+    /* GAME-AREA.HTML PAGE */
 
-.game-area {
+    .game-area {
         width: 35em;
         height: 25em;
     }
 
     .memorycards {
-    grid-template-columns: repeat(4, 150px);
-    grid-template-rows: repeat(3, 150px);
+        grid-template-columns: repeat(4, 150px);
+        grid-template-rows: repeat(3, 150px);
+        top: 50%;
+        left: 50%;
     }
-}
-
-/* Media query: Screens bigger then 1200px */
-@media screen and (min-width: 1200px) { 
+        
 }

@@ -184,7 +184,15 @@ let timerInterval;
 
     // To show the result when a user wins the game
     function showWinResult() {
+        // Check if a win result element already exists
+        const existingWinResult = document.querySelector(".win-result");
 
+        // If it exists, remove it
+        if (existingWinResult) {
+            existingWinResult.remove();
+        }
+
+        // Create a new win result element
         const winResult = document.createElement("div");
         winResult.classList.add("win-result");
 
@@ -200,14 +208,12 @@ let timerInterval;
         winResult.appendChild(winMessage);
         winResult.appendChild(winRestartButton);
 
-        // Append the win result to the game container
-       memoryCards.appendChild(winResult);
+        // Append the new win result to the game container
+        memoryCards.appendChild(winResult);
 
         // Clear the timer interval
         clearInterval(timerInterval);
         timerInterval = null;
-        
-        console.log("showWinResult called");
     }
 
 
@@ -220,10 +226,11 @@ let timerInterval;
         characterCounts = {};
         seconds = 0;
         moves = 0;
+        matchingPairs = 0;
 
         // removes all the memory cards so the front side is up again
         memoryCards.innerHTML = "";
-
+        
         // Restart the game
         startGame();
 
@@ -243,7 +250,7 @@ let timerInterval;
         for (let i = 0; i < 12; i++) {
         const card = createMemoryCard();
 
-        const cardWithImage=addImageToMemoryCard(card)
+        const cardWithImage=addImageToMemoryCard(card);
     
         card.addEventListener("click", () => {
             checkIfCardsMatch(card);
