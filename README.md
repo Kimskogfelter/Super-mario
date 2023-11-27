@@ -125,9 +125,13 @@
 
 ---
 
-#### HOME PAGE
+#### STARTING PAGE
 
-![Main page made in wireframes](https://github.com/Kimskogfelter/Super-mario/blob/main/assets/images/wireframe/memory-game-wireframe.pdf)
+![Starting page made in wireframes](https://github.com/Kimskogfelter/Super-mario/blob/main/assets/images/wireframe/memory-game-wireframe.pdf)
+
+#### GAME PAGE
+
+![Game page made in wireframes](https://github.com/Kimskogfelter/Super-mario/blob/main/assets/images/wireframe/memory-game-wireframe.pdf)
 
 ### TESTING
 
@@ -146,53 +150,21 @@
 
 #### I also tested the website in Lighthouse with the result below
 
-- #### Home Page - Mobile version
+- #### Starting Page - Mobile version
 
-![lighthouse result for home page, mobile version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/Homepage-mobile.webp)
+![lighthouse result for starting page, mobile version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/Homepage-mobile.webp)
 
-- #### Home Page - Desktop version
+- #### Starting Page - Desktop version
 
-![lighthouse result for home page, desktop version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/Homepage-desktop.webp)
+![lighthouse result for starting page, desktop version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/Homepage-desktop.webp)
 
-- #### Safari Gallery Page - Mobile version
+- #### Game Page - Mobile version
 
-![lighthouse result for safari gallery page, mobile version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/Safarigallery-mobile.webp)
+![lighthouse result for game page, mobile version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/Safarigallery-mobile.webp)
 
-- #### Safari Gallery Page - Desktop version
+- #### Game Page - Desktop version
 
-![lighthouse result for safari gallery page, desktop version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/Safarigallery-desktop.webp)
-
-- #### Booking Page - Mobile version
-
-![lighthouse result for booking page, mobile version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/bookingpage-mobile.webp)
-
-- #### Booking Page - Desktop version
-
-![lighthouse result for booking page, desktop version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/bookingpage-desktop.webp)
-
-- #### Contact Us Page - Mobile version
-
-![lighthouse result for contact us page, mobile version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/contactus-mobile.webp)
-
-- #### Contact Us Page - Desktop version
-
-![lighthouse result for contact us page, desktop version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/contactus-desktop.webp)
-
-- #### Booking Page, Thank you Page - Mobile version
-
-![lighthouse result for booking pages, thank you page, mobile version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/bookingpage-thankyou-page-mobile.webp)
-
-- #### Booking Page, Thank you page - Desktop version
-
-![lighthouse result for booking pages, thank you page, desktop version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/bookingpage-thankyou-page-deskttop.webp)
-
-- #### Contact Page, Thank you page - Mobile version
-
-![lighthouse result for contact us pages, thank you page, mobile version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/contactus-thankyou-page-mobile.webp)
-
-- #### Contact Page, Thank you page - Desktop version
-
-![lighthouse result for contact us pages, thank you page, desktop version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/contactus-thankyou-page-desktop.webp)
+![lighthouse result for game page, desktop version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/Safarigallery-desktop.webp)
 
 ### DEPLOYMENT
 
@@ -200,7 +172,7 @@
     This project was deployed to Github.com. The following steps shows how you do it:
 
 1. Log in to your Github.
-2. Go to the Safari Retreat repository in Github: [https://github.com/Kimskogfelter/Safari-Retreat]
+2. Go to the Super Mario repository in Github: [https://github.com/Kimskogfelter/Super-Mario]
 3. Select Settings in the repository navigation menu at the top.
 4. Select Pages at the left handside of the website.
 5. Choose: Deploy from a branch as Source.
@@ -220,15 +192,12 @@
 
 #### MEDIA
 
-- [https://www.pexels.com/sv-se/] and [https://pikwizard.com/] for images
+- [https://freepngimg.com/] for images
 
 #### CODE
 
-- The code for the social media links in the footer are taken from Love Running project. [https://github.com/Code-Institute-Solutions/Love-Running-Solutions.git]
-- the media querys comments in css are taken from Love Running project. [https://github.com/Code-Institute-Solutions/Love-Running-Solutions.git]
-- used information from the site, [https://stackoverflow.com/questions/50178709/set-my-logo-to-the-left-and-navigation-menu-to-the-right-using-flexbox] to make the toggle navigation menu stick to the right side
-- used [https://blog.hubspot.com/website/center-div-css#center-div-css] to center the informations text div
-- code for the hero slide was taken from [https://www.youtube.com/watch?v=Ef8LxpRPGRA]
-- code for the meta tags for the search engines results are from the Love Running project [https://github.com/Code-Institute-Solutions/Love-Running-Solutions.git]
+- I looked on this tutorial on youtube to help me make the memory game [https://www.youtube.com/watch?v=t3cydTwfEnM]
+- The media querys comments in css are taken from Safari Retreat project. [https://github.com/Kimskogfelter/Safari-Retreat]
+- Code for the meta tags for the search engines results are from the Safari Retreat project [https://github.com/Kimskogfelter/Safari-Retreat]
 
-#### All the thanks to the lovely students on slack for helping out when needed and my tutor Ronan for being so supportive and helpfull
+#### All the thanks to the lovely students on slack for helping out when needed and my mentor Ronan for being so supportive and helpfull

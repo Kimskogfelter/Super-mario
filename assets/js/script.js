@@ -185,7 +185,6 @@ let timerInterval;
     // To show the result when a user wins the game
     function showWinResult() {
 
-
         const winResult = document.createElement("div");
         winResult.classList.add("win-result");
 
@@ -194,7 +193,7 @@ let timerInterval;
         winMessage.textContent = "You made it! Congratulations!";
 
         const winRestartButton = document.createElement("button");
-        winRestartButton.textContent = "Play One More Time";
+        winRestartButton.textContent = "Play Again";
         // Add click event listener to the restart button that appears when you win the game
         winRestartButton.addEventListener("click", restartGameButton);
 
@@ -207,7 +206,7 @@ let timerInterval;
         // Clear the timer interval
         clearInterval(timerInterval);
         timerInterval = null;
-
+        
         console.log("showWinResult called");
     }
 
