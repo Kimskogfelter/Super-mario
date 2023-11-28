@@ -2,9 +2,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 let movesElement = document.getElementById('moves');
 // this array contains the images for the revealed card 
-let characters = ["assets/images/toad.png", "assets/images/super-mario.png", 
-"assets/images/scared-boo.png", "assets/images/princess-peach.png",
-    "assets/images/bowser.png", "assets/images/goomba.png"];
+    let characters = [{ src: "assets/images/toad.png", alt: "Toad Image" }, { src: "assets/images/super-mario.png", alt: "Super Mario Image" }, 
+        { src: "assets/images/scared-boo.png", alt: "Boo Image" }, { src: "assets/images/princess-peach.png", alt: "Princess Peach Image" },
+        { src: "assets/images/bowser.png", alt: "Bowser Image" }, { src: "assets/images/goomba.png", alt: "Goomba Image" }];
 const timerElement = document.getElementById('timer');
 const restartButton = document.getElementById('restartbutton');
 // gets the element with the class memorycards
@@ -16,8 +16,6 @@ let moves = 0;
 // Set initial time
 let seconds = 0;
 let timerInterval;
-
-
 
     // creates the memorycard 
     function createMemoryCard() {
@@ -42,6 +40,7 @@ let timerInterval;
         const cardFrontImage = document.createElement("img");
         cardFrontImage.src = "assets/images/yellow-question-block.png";
         cardFront.appendChild(cardFrontImage);
+        cardFrontImage.alt = "Memory Card";
 
         // set dimensions for front card image
         const frontCardImageDimensions = { width: "100%", height: "100%" };
@@ -70,7 +69,8 @@ let timerInterval;
 
         // creating image
         const image = document.createElement("img");
-        image.src = characters[characterIndex];
+        image.src = characters[characterIndex].src;
+        image.alt = characters[characterIndex].alt;
 
         cardRevealed.append(image);
 
