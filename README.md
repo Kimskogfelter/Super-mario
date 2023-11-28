@@ -37,13 +37,20 @@
 
 - The first page a user enters is the starting page. It has the heading text "Super Mario Memomry Game" and a picture of Mario riding on Yoshis back with a little star friend next to them.
 
-![picture of the starting page](assets/images/readme/startpage.jpg)
+![picture of the starting page](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/start-page.webp)
 
 #### GAME AREA PAGE
 
 - The game area contains the memory game. It got 12 different cards that the user can click on and pair them in order to continue and win the game.
 
-![picture of the game area page](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/header-and-navbar.jpg)
+![picture of the game area page](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/game-page.webp)
+
+#### WINNING PAGE
+
+- When the user wins the game a window pops up that says congratulations. The user can then choose to click on a "play again" button to play again.
+
+![picture of the winning page](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/win-result-page.webp)
+
 
 ### FEATURES
 
@@ -127,11 +134,15 @@
 
 #### STARTING PAGE
 
-![Starting page made in wireframes](https://github.com/Kimskogfelter/Super-mario/blob/main/assets/images/wireframe/memory-game-wireframe.pdf)
+![Starting page made in wireframes](assets/images/wireframes/start-page-wireframe.pdf)
 
 #### GAME PAGE
 
-![Game page made in wireframes](https://github.com/Kimskogfelter/Super-mario/blob/main/assets/images/wireframe/memory-game-wireframe.pdf)
+![Game page made in wireframes](https://github.com/Kimskogfelter/Super-Mario/blob/main/assets/images/wireframes/game-area-wireframe.pdf)
+
+#### WINNING PAGE
+
+![Winning page made in wireframes](assets/images/wireframes/win-result-wireframe.pdf)
 
 ### TESTING
 
