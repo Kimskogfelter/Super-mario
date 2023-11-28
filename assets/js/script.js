@@ -1,8 +1,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-let movesElement = document.getElementById('moves');
+const movesElement = document.getElementById('moves');
 // this array contains the images for the revealed card 
-    let characters = [{ src: "assets/images/toad.png", alt: "Toad Image" }, { src: "assets/images/super-mario.png", alt: "Super Mario Image" }, 
+const characters = [{ src: "assets/images/toad.png", alt: "Toad Image" }, { src: "assets/images/super-mario.png", alt: "Super Mario Image" }, 
         { src: "assets/images/scared-boo.png", alt: "Boo Image" }, { src: "assets/images/princess-peach.png", alt: "Princess Peach Image" },
         { src: "assets/images/bowser.png", alt: "Bowser Image" }, { src: "assets/images/goomba.png", alt: "Goomba Image" }];
 const timerElement = document.getElementById('timer');
@@ -10,7 +10,7 @@ const restartButton = document.getElementById('restartbutton');
 // gets the element with the class memorycards
 const memoryCards = document.querySelector(".memorycards");
 // temp array for flipped cards
-let tempForFlippedCards = []
+let tempForFlippedCards = [];
 let matchingPairs = 0;
 let moves = 0;
 // Set initial time
