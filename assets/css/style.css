@@ -327,8 +327,9 @@ button {
     /* GAME-AREA.HTML PAGE */
 
     .game-area {
-        width: 35em;
+        width: 600px;
         height: 25em;
+        margin: 16px;
     }
 
     .memorycards {
