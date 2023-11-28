@@ -16,6 +16,11 @@ button {
     justify-content: center;
 }
 
+.outer-container {
+    display: flex;
+    justify-content: center;
+}
+
 .header {
     color: white;
     font-size: 2rem;
@@ -35,7 +40,7 @@ button {
     margin-top: 2em;
 }
 
-.starting-page-container {
+.inner-container {
     display: flex;
     flex-direction: column;
     margin-top: 15em;

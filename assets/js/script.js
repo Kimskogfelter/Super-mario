@@ -2,9 +2,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 const movesElement = document.getElementById('moves');
 // this array contains the images for the revealed card 
-const characters = [{ src: "assets/images/toad.png", alt: "Toad Image" }, { src: "assets/images/super-mario.png", alt: "Super Mario Image" }, 
-        { src: "assets/images/scared-boo.png", alt: "Boo Image" }, { src: "assets/images/princess-peach.png", alt: "Princess Peach Image" },
-        { src: "assets/images/bowser.png", alt: "Bowser Image" }, { src: "assets/images/goomba.png", alt: "Goomba Image" }];
+const characters = [{ src: "assets/images/toad.webp", alt: "Toad Image" }, { src: "assets/images/super-mario.webp", alt: "Super Mario Image" }, 
+        { src: "assets/images/scared-boo.webp", alt: "Boo Image" }, { src: "assets/images/princess-peach.webp", alt: "Princess Peach Image" },
+    { src: "assets/images/bowser.webp", alt: "Bowser Image" }, { src: "assets/images/goomba.webp", alt: "Goomba Image" }];
 const timerElement = document.getElementById('timer');
 const restartButton = document.getElementById('restartbutton');
 // gets the element with the class memorycards
@@ -38,7 +38,7 @@ let timerInterval;
 
         // add image to front card
         const cardFrontImage = document.createElement("img");
-        cardFrontImage.src = "assets/images/yellow-question-block.png";
+        cardFrontImage.src = "assets/images/yellow-question-block.webp";
         cardFront.appendChild(cardFrontImage);
         cardFrontImage.alt = "Memory Card";
 
