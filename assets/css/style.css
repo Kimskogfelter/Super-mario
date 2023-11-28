@@ -297,6 +297,12 @@ button {
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
 
+    /* INDEX.HTML PAGE */
+
+    .index-body {
+        margin-top: 10rem;
+    }
+
     /* GAME-AREA.HTML PAGE */
 
     .game-area {
@@ -318,8 +324,25 @@ button {
 
 }
 
+/* Media query: tablets and larger (820px and up) */
+@media screen and (min-width: 820px) {
+
+    /* INDEX.HTML PAGE */
+
+    .index-body {
+        margin-top: 15rem;
+    }
+
+}
+
 /* Media query: Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
+
+    /* INDEX.HTML PAGE */
+    
+        .index-body {
+            margin-top: 20rem;
+        }
 
     /* GAME-AREA.HTML PAGE */
 
@@ -341,4 +364,15 @@ button {
         left: 50%;
     }
         
+}
+
+/* Media query: Large devices (laptops and desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+
+    /* INDEX.HTML PAGE */
+
+    .index-body {
+        margin-top: 10rem;
+    }
+
 }
