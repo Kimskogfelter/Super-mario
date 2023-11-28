@@ -134,28 +134,28 @@
 
 #### STARTING PAGE
 
-![Starting page made in wireframes](assets/images/wireframes/start-page-wireframe.pdf)
+![Starting page made in wireframes](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/wireframes/start-page-wireframe.webp)
 
 #### GAME PAGE
 
-![Game page made in wireframes](https://github.com/Kimskogfelter/Super-Mario/blob/main/assets/images/wireframes/game-area-wireframe.pdf)
+![Game page made in wireframes](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/wireframes/game-area-wireframe.webp)
 
 #### WINNING PAGE
 
-![Winning page made in wireframes](assets/images/wireframes/win-result-wireframe.pdf)
+![Winning page made in wireframes](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/wireframes/win-result-wireframe.webp)
 
 ### TESTING
 
 ---
 
-- I tested the website in Chrome, Firefox and Edge browser to see that all pages loaded and that every link, button, form, image and navigation menu was working
+- I tested the website in Chrome, Firefox and Edge browser to see that all pages loaded and that every button and function was working correctly.
 - The site is also responsive which I tested in google chromes devtools by selecting different screensizes and test each function
 - I tested that all text is easy to read and to understand
-- The code got valified through both CSS and HTML validators
+- The code got valified through both HTML, CSS and JS validators
 
 #### BUGS
 
-- when I first deployed this project the images and css code didnt work. the solution was to correct all the pathways to relative ones insted of absolute.
+- when I was finishing the page i noticed that the content on the index page wasnt centered on all devices.
 
 #### LIGHTHOUSE
 
