@@ -155,7 +155,7 @@
 
 #### BUGS
 
-- when I was finishing the page i noticed that the content on the index page wasnt centered on all devices.
+- when I was finishing the page i noticed that the content on the index page wasnt centered on all devices. To  fix the issue i added min-height to both the html and body, and then the index-body which solved the issue because the body height tas stuck to the center of the page before that.
 
 #### LIGHTHOUSE
 
