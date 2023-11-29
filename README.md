@@ -60,19 +60,19 @@
 
 - #### HEADING
 
-- The heading text is at the top of the website and contains the text "Super Mario - Memory Game". Its purpose is to make the user understand what type of game it is that they are going to play.
+  - The heading text is at the top of the website and contains the text "Super Mario - Memory Game". Its purpose is to make the user understand what type of game it is that they are going to play.
 
 ![picture of the heading on the starting page](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/heading.webp)
 
 - #### IMAGE
   
-- The image of Super Mario on Yoshi is under the heading to make the user understand that the game is about Super Mario
+  - The image of Super Mario on Yoshi is under the heading to make the user understand that the game is about Super Mario
 
 ![picture of the image with Super Mario and Yoshi on the starting page](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/image-startpage.webp)
 
 - #### "LETS GO" BUTTON
   
-- Under Super Mario and Yoshi is a button that says "Lets go!". If the user click on the button it takes them to the game page.
+  - Under Super Mario and Yoshi is a button that says "Lets go!". If the user click on the button it takes them to the game page.
 
 ![picture of the "lets go" button on the starting page](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/letsgo-button.webp)
 
@@ -94,21 +94,23 @@
 
   - The memory cards is used to play the game. The user click on one to switch the card and then chooses another one in hope that they are the matching pair.
   - The front of the cards is the question block from the Super Mario game.
-  - When a user click on one card a creature from the Super Mario game appears.
 
 ![picture of the front memory cards](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/memorycards.webp)
-![picture of a clicked memory card](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/memorycards.webp)
+
+  - When a user click on one card a creature from the Super Mario game appears.
+
+![picture of a clicked memory card](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/memorycards-clicked.webp)
 
 - #### RESTART BUTTON
 
-- At the bottom of the game area is a restart" button which the user can click on to restart the game.
+  - At the bottom of the game area is a restart" button which the user can click on to restart the game.
 
 ![picture of the "play/pause" button](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/restart-button.webp)
 
 - #### WINNING DIV
   
-- When a user wins the game a div pops up with the text "You made it! Congratulations!"
-- A button appears below the text that says "Play One More Time" which the user can press to restart the game and play again
+  - When a user wins the game a div pops up with the text "You made it! Congratulations!"
+  - A button appears below the text that says "Play One More Time" which the user can press to restart the game and play again
 
 ![picture of the content that pops up when the user wins the game](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/winning-div.webp)
 
@@ -135,15 +137,15 @@
 
 #### STARTING PAGE
 
-![Starting page made in wireframes](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/wireframes/start-page-wireframe.webp)
+![Starting page made in wireframes](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/wireframes/start-page-wireframe.webp)
 
 #### GAME PAGE
 
-![Game page made in wireframes](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/wireframes/game-area-wireframe.webp)
+![Game page made in wireframes](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/wireframes/game-area-wireframe.webp)
 
 #### WINNING PAGE
 
-![Winning page made in wireframes](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/wireframes/win-result-wireframe.webp)
+![Winning page made in wireframes](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/wireframes/win-result-wireframe.webp)
 
 ### TESTING
 
@@ -191,7 +193,7 @@
 6. Choose: Main as branch and /root as folder and press save.
 7. Wait a few minutes and press the Code menu to the top left.
 8. At the right handside go to Deployment.
-9. Then press the ![picture of the deployment icon on github]() to go to the live website.
+9. Then press the ![picture of the deployment icon on github](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/deployment-icon.webp) to go to the live website.
 
 ### ISSUES
 
