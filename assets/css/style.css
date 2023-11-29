@@ -3,7 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* new code above */
+
+html,
+body {
+    min-height: 100%;
+}
 
 body {
     background: red;
@@ -17,6 +21,13 @@ button {
 }
 
 /* INDEX.HTML PAGE */
+
+.index-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
 .outer-container {
     display: flex;
@@ -41,7 +52,7 @@ button {
     position: fixed;
     text-align: center;
     width: 100%;
-    margin-top: 2em;
+    margin-bottom: 20rem;
 }
 
 .inner-container {
