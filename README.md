@@ -2,7 +2,7 @@
 
 ## SUPER MARIO - THE MEMORY GAME
 
-![picture of the mockup of the website](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/readme/mockup-safari-retreat.webp)
+![picture of the mockup of the website](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/mockup-supermario.webp)
 
 ### PURPOSE
 
@@ -62,19 +62,19 @@
 
 - The heading text is at the top of the website and contains the text "Super Mario - Memory Game". Its purpose is to make the user understand what type of game it is that they are going to play.
 
-![picture of the heading on the starting page](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/header-and-navbar.jpg)
+![picture of the heading on the starting page](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/heading.webp)
 
 - #### IMAGE
   
 - The image of Super Mario on Yoshi is under the heading to make the user understand that the game is about Super Mario
 
-![picture of the image with Super Mario and Yoshi on the starting page](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/header-and-navbar.jpg)
+![picture of the image with Super Mario and Yoshi on the starting page](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/image-startpage.webp)
 
 - #### "LETS GO" BUTTON
   
 - Under Super Mario and Yoshi is a button that says "Lets go!". If the user click on the button it takes them to the game page.
 
-![picture of the "lets go" button on the starting page](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/header-and-navbar.jpg)
+![picture of the "lets go" button on the starting page](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/letsgo-button.webp)
 
 #### GAME AREA PAGE
 
@@ -82,13 +82,13 @@
 
   - The memory game has a section that counts how many moves the user does during the game
 
-![picture of the moves section](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/hero-image.jpg)
+![picture of the moves section](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/moves.webp)
 
 - #### TIMER SECTION
 
   - The timer starts as soon as the user press "play" and stops when the player completes or pause the game.
 
-![picture of the timer section](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/retreat-section.jpg)
+![picture of the timer section](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/timer.webp)
 
 - #### MEMORY CARDS
 
@@ -96,20 +96,21 @@
   - The front of the cards is the question block from the Super Mario game.
   - When a user click on one card a creature from the Super Mario game appears.
 
-![picture of the memory cards](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/safari-section.jpg)
+![picture of the front memory cards](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/memorycards.webp)
+![picture of a clicked memory card](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/memorycards.webp)
 
 - #### RESTART BUTTON
 
 - At the bottom of the game area is a restart" button which the user can click on to restart the game.
 
-![picture of the "play/pause" button](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/safari-gallery-page.jpg)
+![picture of the "play/pause" button](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/restart-button.webp)
 
 - #### WINNING DIV
   
 - When a user wins the game a div pops up with the text "You made it! Congratulations!"
 - A button appears below the text that says "Play One More Time" which the user can press to restart the game and play again
 
-![picture of the div that pops up when the user wins the game](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/safari-gallery-page.jpg)
+![picture of the content that pops up when the user wins the game](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/winning-div.webp)
 
 ### COLOR SCHEME
 
@@ -163,19 +164,19 @@
 
 - #### Starting Page - Mobile version
 
-![lighthouse result for starting page, mobile version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/Homepage-mobile.webp)
+![lighthouse result for starting page, mobile version](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/lighthouse/lighthouse-startpage-mobile.webp)
 
 - #### Starting Page - Desktop version
 
-![lighthouse result for starting page, desktop version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/Homepage-desktop.webp)
+![lighthouse result for starting page, desktop version](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/lighthouse/lighthouse-startpage-desktop.webp)
 
 - #### Game Page - Mobile version
 
-![lighthouse result for game page, mobile version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/Safarigallery-mobile.webp)
+![lighthouse result for game page, mobile version](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/lighthouse/lighthouse-gamepage-mobile.webp)
 
 - #### Game Page - Desktop version
 
-![lighthouse result for game page, desktop version](https://raw.githubusercontent.com/Kimskogfelter/Safari-Retreat/main/assets/images/lighthouse/Safarigallery-desktop.webp)
+![lighthouse result for game page, desktop version](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/lighthouse/lighthouse-gamepage-desktop.webp)
 
 ### DEPLOYMENT
 
@@ -190,7 +191,7 @@
 6. Choose: Main as branch and /root as folder and press save.
 7. Wait a few minutes and press the Code menu to the top left.
 8. At the right handside go to Deployment.
-9. Then press the ![picture of the deployment icon on github](https://github.com/Kimskogfelter/Safari-Retreat/blob/main/assets/images/readme/deployment-icon.jpg) to go to the live website.
+9. Then press the ![picture of the deployment icon on github]() to go to the live website.
 
 ### ISSUES
 
