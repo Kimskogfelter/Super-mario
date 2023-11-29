@@ -8,7 +8,7 @@
 
 ---
 
- My first thought when starting this project was to make a fun and easy game for my two toddler boys who love Super Mario at the moment. And what game can be better then a memory game that includes pictures of different creatures from the Super Mario game. A memory game fits everyone who wants to train their memory and speed skill. Both kids and adults can play due to its easy design and mecanics. The user need to find two pictures of the same creature to score a point. The game got a timer that starts as soon as you press "play". The user can also pause the game at the same button that says "play" at the beginning of entering the page. As soon as you press "play" the button changes to "stop game" and the user can deside to pause the game when they need to. The timer continues to count until the user have found all the matching cards. The game also got a "moves" tracker who shows how many moves a user has taken during the game.  
+ My first thought when starting this project was to make a fun and easy game for my two toddler boys who love Super Mario at the moment. And what game can be better then a memory game that includes pictures of different creatures from the Super Mario game. A memory game fits everyone who wants to train their memory and speed skill. Both kids and adults can play due to its easy design and mecanics. The user need to find two pictures of the same creature to score a point. The game starts as soon as the user has clicked on the "lets go" button on the starting page that takes the user to the actual game page. The game got a timer that continues to count until the user have found all the matching cards. The game also got a "moves" tracker who shows how many moves a user has taken during the game.  
 
 ### UX DESIGN
 
@@ -35,7 +35,7 @@
 
 #### STARTING PAGE
 
-- The first page a user enters is the starting page. It has the heading text "Super Mario Memomry Game" and a picture of Mario riding on Yoshis back with a little star friend next to them.
+- The first page a user enters is the starting page. It has the heading text "Super Mario Memory Game" and a picture of Mario riding on Yoshis back with a little star friend next to them.
 
 ![picture of the starting page](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/start-page.webp)
 
