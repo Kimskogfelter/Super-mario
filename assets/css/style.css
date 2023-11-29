@@ -161,8 +161,8 @@ button {
 }
 
 .memorycards {
+
     position: relative;
-    /* new code above*/
     display: grid;
     grid-template-columns: repeat(3, 130px);
     grid-template-rows: repeat(4, 130px);
@@ -361,9 +361,4 @@ button {
         left: 50%;
     }
         
-}
-
-/* Media query: Large devices (laptops and desktops, 1200px and up) */
-@media screen and (min-width: 1200px) {
-
 }
