@@ -96,7 +96,7 @@
 
 ![picture of the front memory cards](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/memorycards.webp)
 
-  - When a user click on one card a creature from the Super Mario game appears.
+- When a user click on one card a creature from the Super Mario game appears.
 
 ![picture of a clicked memory card](https://raw.githubusercontent.com/Kimskogfelter/Super-Mario/main/assets/images/readme/memorycards-clicked.webp)
 
@@ -158,6 +158,7 @@
 #### BUGS
 
 - when I was finishing the page i noticed that the content on the index page wasnt centered on all devices. To  fix the issue i added min-height to both the html and body, and then the index-body which solved the issue because the body height tas stuck to the center of the page before that.
+- saw that when you press the "restart game" button when you have pressed one memory card and dont have pressed another one to be compared with, that card is "used" when you have restarted the game and is compared to the first card you choose. Unfortunately I dont got the time to try and fix that issue.
 
 #### LIGHTHOUSE
 
@@ -198,8 +199,7 @@
 
 ---
 
-- The form in the Booking page looks squished together in the firefox browser only. All the other pages looks like they should in firefox, edge and chrome
-- The IDE i was working with (Code Anywhere) have been very buggy during this time ive been working with this project. The last two weeks I couldnt see any changes I made unless I commited and pushed to Git. Which have made the project get many commits
+- Ive been having a really hard time to understand javascript. Its been alot happening at home during this time with the kids having to be home due to us moving to a new home and my husbands mom dying. The funural was 1 december so I havent been having the time to finish the project as I would like to. Im aware that I can have used to little own code, hopefully thats not the case.
 
 ### CREDITS
 
