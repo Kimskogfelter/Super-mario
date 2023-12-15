@@ -12,11 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // temp array for flipped cards
     let tempForFlippedCards = [];
+
     let matchingPairs = 0;
     let moves = 0;
     // Set initial time
     let seconds = 0;
     let timerInterval;
+
+    let comparingCards = false;
+
+    let isProcessingMove = false;
 
     // creates the memorycard 
     function createMemoryCard() {
@@ -66,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         characterCounts[characterIndex] = (characterCounts[characterIndex] || 0) + 1;
 
         // adding character index to card for furthur use
-        card.setAttribute("id", characterIndex);
+        card.setAttribute("data-character-id", characterIndex);
 
         // creating image
         const image = document.createElement("img");
@@ -106,29 +111,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // checks if cards match
     function checkIfCardsMatch(card) {
-        // If user clicked a matched card or the same card
-        if (card.classList.contains("disabledcard") || card.classList.contains("click")) {
+        if (isProcessingMove) {
+            // If the game is still processing a move, return early to ignore additional clicks
+            return;
+        }
+        if (comparingCards) {
+            // If cards are being compared, return early to ignore additional clicks
             return;
         }
 
-        const cardId = card.getAttribute("data-id"); // Use data-id attribute
+        const cardId = card.getAttribute("data-character-id");
+        const isFlipped = card.getAttribute("data-flipped") === "true";
 
-
-        card.classList.add("click");  // Mark the card as clicked
-
-        // the first card that was clicked
-        if (tempForFlippedCards.length === 0) {
-            tempForFlippedCards.push(cardId);
+        if (card.classList.contains("disabledcard") || isFlipped) {
             return;
         }
 
-        // if the second card that was clicked is not the same as the first card
+        card.setAttribute("data-flipped", "true");
+
         if (tempForFlippedCards.length > 0 && tempForFlippedCards[0] !== cardId) {
+            comparingCards = true;
+
+            // Set the state to indicate that the move is being processed
+            isProcessingMove = true;
+
             setTimeout(() => {
                 unflippingCard();
-            }, 1000);
+                comparingCards = false;
+                isProcessingMove = false; // Reset the state when the move is processed
+            }, 3000);
 
-            // update moves score by 1
             moves++;
             updateUI();
 
@@ -136,11 +148,17 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // if the second card is the same as the first card
         if (tempForFlippedCards.length > 0 && tempForFlippedCards[0] === cardId) {
+            comparingCards = true;
+
+            // Set the state to indicate that the move is being processed
+            isProcessingMove = true;
+
             setTimeout(() => {
                 markAsMatched(card);
-            }, 1000);
+                comparingCards = false;
+                isProcessingMove = false; // Reset the state when the move is processed
+            }, 3000);
 
             tempForFlippedCards = [];
         }
@@ -151,9 +169,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const cards = document.querySelectorAll(".card");
 
         cards.forEach((card) => {
-            if (!card.classList.contains("disabledcard")) {
-                card.classList = ["card"];
-                card.removeAttribute("data-id"); // Clear data-id attribute
+            const isFlipped = card.getAttribute("data-flipped") === "true";
+
+            if (!card.classList.contains("disabledcard") && isFlipped) {
+                card.setAttribute("data-flipped", "false");
             }
         });
     }
@@ -171,8 +190,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const cards = document.querySelectorAll(".card");
 
         cards.forEach((card) => {
-            if (card.id === id) {
-                card.classList = ["card disabledcard click"];
+            if (card.getAttribute("data-character-id") == id) {
+                card.classList.add("card", "disabledcard", "click");
             }
         });
         // Add to the matchedPairs count
