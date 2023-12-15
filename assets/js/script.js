@@ -1,21 +1,22 @@
-
 document.addEventListener('DOMContentLoaded', () => {
-const movesElement = document.getElementById('moves');
-// this array contains the images for the revealed card 
-const characters = [{ src: "assets/images/toad.webp", alt: "Toad Image" }, { src: "assets/images/super-mario.webp", alt: "Super Mario Image" }, 
-        { src: "assets/images/scared-boo.webp", alt: "Boo Image" }, { src: "assets/images/princess-peach.webp", alt: "Princess Peach Image" },
+    
+    const movesElement = document.getElementById('moves');
+    // this array contains the images for the revealed card 
+    const characters = [{ src: "assets/images/toad.webp", alt: "Toad Image" }, { src: "assets/images/super-mario.webp", alt: "Super Mario Image" },
+    { src: "assets/images/scared-boo.webp", alt: "Boo Image" }, { src: "assets/images/princess-peach.webp", alt: "Princess Peach Image" },
     { src: "assets/images/bowser.webp", alt: "Bowser Image" }, { src: "assets/images/goomba.webp", alt: "Goomba Image" }];
-const timerElement = document.getElementById('timer');
-const restartButton = document.getElementById('restartbutton');
-// gets the element with the class memorycards
-const memoryCards = document.querySelector(".memorycards");
-// temp array for flipped cards
-let tempForFlippedCards = [];
-let matchingPairs = 0;
-let moves = 0;
-// Set initial time
-let seconds = 0;
-let timerInterval;
+    const timerElement = document.getElementById('timer');
+    const restartButton = document.getElementById('restartbutton');
+    // gets the element with the class memorycards
+    const memoryCards = document.querySelector(".memorycards");
+
+    // temp array for flipped cards
+    let tempForFlippedCards = [];
+    let matchingPairs = 0;
+    let moves = 0;
+    // Set initial time
+    let seconds = 0;
+    let timerInterval;
 
     // creates the memorycard 
     function createMemoryCard() {
@@ -101,54 +102,58 @@ let timerInterval;
         timerInterval = setInterval(updateTimer, 1000);
     }
 
-   
+
 
     // checks if cards match
-    function checkIfCardsMatch (card) 
-    {
-        // If user clicked  a matched card
-        if (card.classList.contains("disabledcard") || card.classList.contains("click"))
+    function checkIfCardsMatch(card) {
+        // If user clicked a matched card or the same card
+        if (card.classList.contains("disabledcard") || card.classList.contains("click")) {
             return;
+        }
+
+        const cardId = card.getAttribute("data-id"); // Use data-id attribute
+
+
+        card.classList.add("click");  // Mark the card as clicked
 
         // the first card that was clicked
         if (tempForFlippedCards.length === 0) {
-            tempForFlippedCards.push(card.id);
+            tempForFlippedCards.push(cardId);
             return;
         }
 
-        // if second card that was click is not the same as the first card
-        if (tempForFlippedCards.length > 0 && !tempForFlippedCards.includes(card.id)) {
-            tempForFlippedCards = [];
-
+        // if the second card that was clicked is not the same as the first card
+        if (tempForFlippedCards.length > 0 && tempForFlippedCards[0] !== cardId) {
             setTimeout(() => {
                 unflippingCard();
-            }, 500);
+            }, 1000);
 
             // update moves score by 1
-            moves = moves + 1;
+            moves++;
             updateUI();
 
+            tempForFlippedCards = [];
             return;
         }
-        // if second card is the same as first card
-        if (tempForFlippedCards.length > 0 && tempForFlippedCards.includes(card.id)) {
-            tempForFlippedCards = [];
+
+        // if the second card is the same as the first card
+        if (tempForFlippedCards.length > 0 && tempForFlippedCards[0] === cardId) {
             setTimeout(() => {
-                markAsMatched(card.id);
+                markAsMatched(card);
             }, 1000);
-            return;
+
+            tempForFlippedCards = [];
         }
     }
-
 
     // Unflipping all the card but not those who are already matched
     function unflippingCard() {
         const cards = document.querySelectorAll(".card");
 
-        // we will loop through all cards and check if they got the class "disabledcard" which means they are matched
         cards.forEach((card) => {
             if (!card.classList.contains("disabledcard")) {
                 card.classList = ["card"];
+                card.removeAttribute("data-id"); // Clear data-id attribute
             }
         });
     }
@@ -159,7 +164,7 @@ let timerInterval;
         movesElement.textContent = ` Moves: ${String(moves).padStart(1, "0")}`;
     }
 
-   
+
 
     //function taking 2 card ids and adding disabledcard class to it which means its matched
     function markAsMatched(id) {
@@ -170,13 +175,12 @@ let timerInterval;
                 card.classList = ["card disabledcard click"];
             }
         });
-
         // Add to the matchedPairs count
         matchingPairs++;
 
         // Check if all pairs are matched
-       if (matchingPairs === characters.length) {
-           
+        if (matchingPairs === characters.length) {
+
             // Call a function to show the "You Won" overlay
             showWinResult();
         }
@@ -222,15 +226,25 @@ let timerInterval;
     function restartGameButton() {
         // Clear the timer interval
         clearInterval(timerInterval);
+
+        // Remove the existing win result
+        const existingWinResult = document.querySelector(".win-result");
+        if (existingWinResult) {
+            existingWinResult.remove();
+        }
+
         // Reset variables
         characterCounts = {};
         seconds = 0;
         moves = 0;
         matchingPairs = 0;
 
+        // Clear the array of flipped card IDs
+        tempForFlippedCards = [];
+
         // removes all the memory cards so the front side is up again
         memoryCards.innerHTML = "";
-        
+
         // Restart the game
         startGame();
 
@@ -240,27 +254,29 @@ let timerInterval;
         // restart timer
         startTimer();
     }
-
     // Add click event listener to the restart button
     restartButton.addEventListener('click', restartGameButton);
 
-    
- /* starts the game */
-    function startGame () {
+
+    /* starts the game */
+    function startGame() {
         for (let i = 0; i < 12; i++) {
-        const card = createMemoryCard();
+            const card = createMemoryCard();
 
-        const cardWithImage=addImageToMemoryCard(card);
-    
-        card.addEventListener("click", () => {
-            checkIfCardsMatch(card);
-            card.classList.add("click");
-        });
+            const cardWithImage = addImageToMemoryCard(card);
 
-        memoryCards.appendChild(cardWithImage);
+            // Use the data-id attribute for identification
+            card.setAttribute("data-id", i);
+
+            memoryCards.appendChild(cardWithImage);
+
+            // Move the event listener after adding the image
+            card.addEventListener("click", () => {
+                checkIfCardsMatch(card);
+                card.classList.add("click");
+            });
+        }
     }
-    }
-
 
 
     // Start the timer when the page is loaded
