@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     const movesElement = document.getElementById('moves');
     // this array contains the images for the revealed card 
     const characters = [{ src: "assets/images/toad.webp", alt: "Toad Image" }, { src: "assets/images/super-mario.webp", alt: "Super Mario Image" },
@@ -115,8 +115,44 @@ document.addEventListener('DOMContentLoaded', () => {
             // If the game is still processing a move, return early to ignore additional clicks
             return;
         }
-        if (comparingCards) {
-            // If cards are being compared, return early to ignore additional clicks
+
+        const cardId = card.getAttribute("data-character-id");
+        const isFlipped = card.getAttribute("data-flipped") === "true";
+
+        if (card.classList.contains("disabledcard") || isFlipped) {
+            return;
+        }
+
+        card.setAttribute("data-flipped", "true");
+
+        tempForFlippedCards.push(card);
+
+        if (tempForFlippedCards.length === 2) {
+            comparingCards = true;
+
+            const [firstCard, secondCard] = tempForFlippedCards;
+            const firstCardId = firstCard.getAttribute("data-character-id");
+            const secondCardId = secondCard.getAttribute("data-character-id");
+
+            if (firstCardId !== secondCardId) {
+                setTimeout(() => {
+                    unflippingCard();
+                    isProcessingMove = false; // Reset the state when the move is processed
+                }, 1000);
+            } else {
+                markAsMatched(firstCardId);
+                isProcessingMove = false; // Reset the state when the move is processed
+            }
+
+            tempForFlippedCards = [];
+            moves++;
+            updateUI();
+        }
+    } 
+    
+    function checkIfCardsMatch(card) {
+        if (isProcessingMove) {
+            // If the game is still processing a move, return early to ignore additional clicks
             return;
         }
 
@@ -129,38 +165,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
         card.setAttribute("data-flipped", "true");
 
-        if (tempForFlippedCards.length > 0 && tempForFlippedCards[0] !== cardId) {
+        tempForFlippedCards.push(card);
+
+        if (tempForFlippedCards.length === 2) {
             comparingCards = true;
 
-            // Set the state to indicate that the move is being processed
-            isProcessingMove = true;
+            const [firstCard, secondCard] = tempForFlippedCards;
+            const firstCardId = firstCard.getAttribute("data-id");
+            const secondCardId = secondCard.getAttribute("data-id");
 
-            setTimeout(() => {
-                unflippingCard();
-                comparingCards = false;
+            if (firstCardId !== secondCardId) {
+                setTimeout(() => {
+                    unflippingCard();
+                    isProcessingMove = false; // Reset the state when the move is processed
+                }, 1000);
+            } else {
+                markAsMatched(cardId);
                 isProcessingMove = false; // Reset the state when the move is processed
-            }, 3000);
+            }
 
+            tempForFlippedCards = [];
             moves++;
             updateUI();
-
-            tempForFlippedCards = [];
-            return;
-        }
-
-        if (tempForFlippedCards.length > 0 && tempForFlippedCards[0] === cardId) {
-            comparingCards = true;
-
-            // Set the state to indicate that the move is being processed
-            isProcessingMove = true;
-
-            setTimeout(() => {
-                markAsMatched(card);
-                comparingCards = false;
-                isProcessingMove = false; // Reset the state when the move is processed
-            }, 3000);
-
-            tempForFlippedCards = [];
         }
     }
 
@@ -173,6 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (!card.classList.contains("disabledcard") && isFlipped) {
                 card.setAttribute("data-flipped", "false");
+                card.classList.remove("click");
             }
         });
     }
