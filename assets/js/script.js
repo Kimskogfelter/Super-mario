@@ -150,46 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     } 
     
-    function checkIfCardsMatch(card) {
-        if (isProcessingMove) {
-            // If the game is still processing a move, return early to ignore additional clicks
-            return;
-        }
-
-        const cardId = card.getAttribute("data-character-id");
-        const isFlipped = card.getAttribute("data-flipped") === "true";
-
-        if (card.classList.contains("disabledcard") || isFlipped) {
-            return;
-        }
-
-        card.setAttribute("data-flipped", "true");
-
-        tempForFlippedCards.push(card);
-
-        if (tempForFlippedCards.length === 2) {
-            comparingCards = true;
-
-            const [firstCard, secondCard] = tempForFlippedCards;
-            const firstCardId = firstCard.getAttribute("data-id");
-            const secondCardId = secondCard.getAttribute("data-id");
-
-            if (firstCardId !== secondCardId) {
-                setTimeout(() => {
-                    unflippingCard();
-                    isProcessingMove = false; // Reset the state when the move is processed
-                }, 1000);
-            } else {
-                markAsMatched(cardId);
-                isProcessingMove = false; // Reset the state when the move is processed
-            }
-
-            tempForFlippedCards = [];
-            moves++;
-            updateUI();
-        }
-    }
-
+    
     // Unflipping all the card but not those who are already matched
     function unflippingCard() {
         const cards = document.querySelectorAll(".card");
