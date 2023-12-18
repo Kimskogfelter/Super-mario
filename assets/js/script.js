@@ -241,6 +241,9 @@ document.addEventListener('DOMContentLoaded', () => {
         moves = 0;
         matchingPairs = 0;
 
+        // removes all the cards in this array
+        tempForFlippedCards = [];
+
         // removes all the memory cards so the front side is up again
         memoryCards.innerHTML = "";
 
