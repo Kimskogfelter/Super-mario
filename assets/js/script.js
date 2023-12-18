@@ -105,9 +105,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // checks if cards match
     function checkIfCardsMatch(card) {
-        // If user clicked  a matched card
-        if (card.classList.contains("disabledcard") || card.classList.contains("click"))
+        // If user clicked a matched card
+        if (card.classList.contains("disabledcard") || card.classList.contains("click")) {
             return;
+        }
+
+        // If user has already clicked two cards, wait for a delay and then process the cards
+        if (tempForFlippedCards.length >= 2) {
+            setTimeout(() => {
+                processFlippedCards();
+            }, 1000); // Adjust the delay duration as needed
+            return;
+        }
 
         // the first card that was clicked
         if (tempForFlippedCards.length === 0) {
@@ -115,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // if second card that was click is not the same as the first card
+        // if second card that was clicked is not the same as the first card
         if (tempForFlippedCards.length > 0 && !tempForFlippedCards.includes(card.id)) {
             tempForFlippedCards = [];
 
@@ -129,7 +138,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             return;
         }
-        // if second card is the same as first card
+
+        // if second card is the same as the first card
         if (tempForFlippedCards.length > 0 && tempForFlippedCards.includes(card.id)) {
             tempForFlippedCards = [];
             setTimeout(() => {
@@ -142,9 +152,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Unflipping all the card but not those who are already matched
     function unflippingCard() {
+        // Clear tempForFlippedCards before the delay
+        tempForFlippedCards = [];
+
         const cards = document.querySelectorAll(".card");
 
-        // we will loop through all cards and check if they got the class "disabledcard" which means they are matched
+        // Loop through all cards and unflip them
         cards.forEach((card) => {
             if (!card.classList.contains("disabledcard")) {
                 card.classList = ["card"];
@@ -152,13 +165,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
     // update ui function for all possible state update up ahead
     function updateUI() {
         // update moves count
         movesElement.textContent = ` Moves: ${String(moves).padStart(1, "0")}`;
     }
 
+    function enableCardClicks(enabled) {
+        const cards = document.querySelectorAll(".card");
+        cards.forEach((card) => {
+            card.removeEventListener("click", clickHandler);
+            if (enabled) {
+                card.addEventListener("click", clickHandler);
+            }
+        });
+    }
 
+    function clickHandler() {
+        checkIfCardsMatch(this);
+    }
 
     //function taking 2 card ids and adding disabledcard class to it which means its matched
     function markAsMatched(id) {
