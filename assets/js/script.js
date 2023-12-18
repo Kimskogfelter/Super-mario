@@ -172,19 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
         movesElement.textContent = ` Moves: ${String(moves).padStart(1, "0")}`;
     }
 
-    function enableCardClicks(enabled) {
-        const cards = document.querySelectorAll(".card");
-        cards.forEach((card) => {
-            card.removeEventListener("click", clickHandler);
-            if (enabled) {
-                card.addEventListener("click", clickHandler);
-            }
-        });
-    }
-
-    function clickHandler() {
-        checkIfCardsMatch(this);
-    }
+    
 
     //function taking 2 card ids and adding disabledcard class to it which means its matched
     function markAsMatched(id) {
