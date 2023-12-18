@@ -187,12 +187,18 @@ document.addEventListener('DOMContentLoaded', () => {
         // Add to the matchedPairs count
         matchingPairs++;
 
+        // Update moves score by 1
+        moves = moves + 1;
+
         // Check if all pairs are matched
         if (matchingPairs === characters.length) {
 
             // Call a function to show the "You Won" overlay
             showWinResult();
         }
+
+        // Update the UI
+        updateUI();
     }
 
     // To show the result when a user wins the game
