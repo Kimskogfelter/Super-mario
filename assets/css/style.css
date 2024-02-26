@@ -112,6 +112,7 @@ button {
 
 }
 
+/* timer and moves container */
 .stats-container {
 
     display: flex;
@@ -120,7 +121,7 @@ button {
     margin-bottom: 1em;
 
 }
-
+/* timer tracker */
 #timer {
 
     color: white;
@@ -141,6 +142,7 @@ button {
 
 }
 
+/* moves tracker */
 #moves {
 
     color: white;
@@ -160,6 +162,7 @@ button {
 
 }
 
+/* memorycards container */
 .memorycards {
 
     position: relative;
@@ -170,6 +173,7 @@ button {
    
     }
 
+/* outer memory card container  */    
 .card {
 
     margin: 10px;
@@ -178,6 +182,7 @@ button {
     perspective: 1000px;
 }
 
+/* inner memory card container */
 .inner-card {
     position: relative;
     transition: transform 0.9s;
@@ -187,10 +192,12 @@ button {
 
 }
 
+/* makes the memory card rotate when clicked */
 .card.click .inner-card {
     transform: rotateY(180deg);
 }
 
+/* shows the revealed memory card when clicked */
 .card-revealed,
 .card-front {
     position: absolute;
@@ -200,11 +207,13 @@ button {
     height: 100%;
 }
 
+/* red background for the front card */
 .card-front {
     background-color: red;
     color: red;
 }
 
+/* red background for the revealed card */
 .card-revealed {
     background-color: red;
     color: red;
@@ -214,10 +223,12 @@ button {
     transform: rotateY(180deg);
 }
 
+/* revealed image of memory card */
 .card-revealed img {
     width: 90%;
 }
 
+/* front image of memory card */
 .card-image {
 
     width: 99%;
@@ -226,6 +237,7 @@ button {
 
 }
 
+/* restart button */
 #restartbutton {
     width: 8em;
     height: 3em;
@@ -253,6 +265,7 @@ button {
 
 }
 
+/* hover effect on restart button */
 #restartbutton:hover {
     transform: scale(0.8);
 
@@ -280,6 +293,7 @@ button {
     border-radius: 2em;
 }
 
+/* winning message container */
 .winning-message {
     font-size: 2rem;
     color: white;
@@ -287,6 +301,7 @@ button {
     margin-bottom: 20px;
 }
 
+/* winning message button */
 .win-result button {
     width: 8em;
     height: 3em;
